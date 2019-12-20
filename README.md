@@ -1,10 +1,8 @@
 <p align="center">
 <a href="https://brainjocks.com/">
-    <img alt="Brainjocks" src="https://brainjocks.com//brainjocks-logo-holiday svg.svg"/>
+    <img alt="Brainjocks" src="https://brainjocks.com/-/media/Images/Brainjocks/Logos/brainjocks-logo-holiday%20svg.svg"/>
   </a>
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
+
 </p>
 <h1 align="center">
   Brainjocks.com POC
