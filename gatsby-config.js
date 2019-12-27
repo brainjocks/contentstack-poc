@@ -25,14 +25,14 @@ module.exports = {
     //     icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
     //   },
     // },
-    {
-      resolve: "gatsby-source-contentstack",
-      options:{
-        'api_key': process.env.CONTENTSTACK_API_KEY,
-        'delivery_token': process.env.CONTENTSTACK_DELIVERY_TOKEN,
-        'environment': process.env.CONTENTSTACK_ENVIRONMENT
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-contentstack",
+    //   options:{
+    //     'api_key': process.env.CONTENTSTACK_API_KEY,
+    //     'delivery_token': process.env.CONTENTSTACK_DELIVERY_TOKEN,
+    //     'environment': process.env.CONTENTSTACK_ENVIRONMENT
+    //   },
+    // },
     // 'gatsby-plugin-offline'
   ],
 }
