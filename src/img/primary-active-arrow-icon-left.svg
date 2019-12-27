@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="10px" viewBox="0 0 14 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>arrow icon left</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Brainjocks-2019" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Job-Detail---Desktop" transform="translate(-189.000000, -169.000000)" fill="#00586a">
+            <g id="Hero">
+                <g id="View-all-jobs" transform="translate(189.000000, 164.000000)">
+                    <g id="arrow-icon-left" transform="translate(0.000000, 5.000000)">
+                        <polygon id="arrow" transform="translate(6.939980, 5.000000) scale(-1, 1) rotate(-360.000000) translate(-6.939980, -5.000000) " points="8.87996083 9.43600753e-11 8.00496083 0.875 11.5049608 4.375 -3.75368179e-12 4.375 -3.75368179e-12 5.625 11.5049608 5.625 8.00496083 9.125 8.87996083 10 13.8799608 5"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
