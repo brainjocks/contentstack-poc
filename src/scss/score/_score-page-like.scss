@@ -1,0 +1,63 @@
+﻿.default-like {
+    position: relative;
+    text-align: center;
+    line-height: 1;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:focus, &:active:focus {
+       outline: none !important;
+    }
+
+    a {
+        position: relative;
+        line-height: 1;
+        text-decoration: none;
+
+        &:hover, &.active:hover {
+            text-decoration: none;
+        }
+
+        &.active {
+            text-decoration: none;
+        }
+
+    }
+
+    &.active {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        .icon {
+            background-image: url('../img/vote-thumbs-up-on.svg');
+        }
+
+    }
+
+    .icon {
+        display: block;
+        float: left;
+        background-image: url('../img/vote-thumbs-up-off.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+
+    .count {
+        position: relative;
+        font-size: 16px;
+        text-decoration: none;
+        padding-top: 5px;
+        float: left;
+        color: #000;
+    }
+
+}

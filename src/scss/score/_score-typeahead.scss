@@ -1,0 +1,73 @@
+.default-search-box {
+    @include clearfix;
+    .js-typeahead {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 34px;
+    }
+    .twitter-typeahead {
+        width: 100%;
+        height: 100%;
+        input {
+            width: 100%;
+            line-height: 24px;
+            border: 1px solid #ddd;
+            padding-right: 10px;
+
+            &::-ms-clear {
+                display: none;
+            }
+        }
+        .tt-hint, .tt-input {
+            padding-left: 10px;
+        }
+        
+        .tt-input {
+            height: 100%;
+            background-color: #FFFFFF !important; //hiding the tt-hint text needs tt-input box to hava background color
+        }
+
+        .tt-hint {
+            display: none;
+        }
+
+        .tt-menu {
+            width: 350px;
+            left: inherit !important; //override injected left: 0; position from typeahead
+            right: -50px;
+        }
+        .score-typeahead-header {
+            font-size: 16px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .score-typeahead-content {
+            border-bottom: 1px solid #ddd;
+        }
+        .score-typeahead-footer {
+            padding: 10px;
+        }
+    }
+    .clear-input {
+        display: flex;
+        align-items: top;
+        height: 100%;
+        font-size: 22px;
+        background: #ddd;
+        padding: 0 4px;
+        cursor: pointer;
+    }
+    .button {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        padding: 3px 5px;
+        color: #fff;
+        background-color: #337ab7;
+        border-radius: 0;
+        z-index: 2;
+        cursor: pointer;
+    }
+}

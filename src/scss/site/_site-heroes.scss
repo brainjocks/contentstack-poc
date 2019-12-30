@@ -1,0 +1,626 @@
+﻿.score-hero {
+    @include vertical-space($vertical-spacing);
+
+    .score-hero-image {
+        img {
+        }
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 50px;
+        @include vertical-space($vertical-spacing);
+        @media screen and (min-width: $screen-sm-min) {
+            font-size: 60px;
+            line-height: 72px;
+        }
+    }
+
+    h2 {
+    }
+
+    .score-hero-body {
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 30px;
+        @include vertical-space($vertical-spacing);
+        @media screen and (min-width: $screen-sm-min) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+
+    .score-call-to-action {
+    }
+}
+
+.score-full-width-hero {
+    @include vertical-space($vertical-spacing);
+
+    .score-hero-image {
+        img {
+        }
+    }
+
+    h1 {
+    }
+
+    h2 {
+    }
+
+    .score-hero-body {
+    }
+
+    .score-call-to-action {
+    }
+}
+
+.score-section-hero {
+    @include vertical-space($vertical-spacing);
+    @media screen and (min-width: $screen-sm-min) {
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 72px;
+        @include vertical-space(60px);
+    }
+
+    .score-hero-image {
+        margin-bottom: 24px;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    h2 {
+        font-family: $brainjocks-font-secondary;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 50px;
+        margin-top: 0;
+        @include vertical-space(20px);
+        @media screen and (min-width: $screen-sm-min) {
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 72px;
+            @include vertical-space($vertical-spacing);
+        }
+    }
+
+    h3 {
+        font-family: $brainjocks-font-secondary;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 42px;
+        margin-top: 0;
+        @include vertical-space(20px);
+        @media screen and (min-width: $screen-sm-min) {
+            font-size: 45px;
+            font-weight: 600;
+            line-height: 55px;
+            @include vertical-space($vertical-spacing);
+        }
+    }
+
+    .score-hero-body {
+        font-family: $brainjocks-font-primary;
+        font-size: 17px;
+        font-weight: normal;
+        line-height: 26px;
+        @include vertical-space(24px);
+        @media screen and (min-width: $screen-sm-min) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        ul {
+            padding: 0 20px;
+        }
+    }
+
+    .score-call-to-action {
+        margin-top: 16px;
+    }
+
+    .score-button-group {
+        margin-top: 30px;
+
+        .score-button {
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    &.sticky-header {
+        display: flex;
+        align-self: flex-start;
+        flex: 1 1 auto;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-top: 60px;
+        margin-bottom: 0;
+
+        .score-hero-image {
+            align-self: center;
+            order: 3;
+            margin-top: 30px;
+
+            img {
+                width: 100%;
+                max-width: 100%;
+                @media screen and (min-width: $screen-md-min) {
+                    max-width: 700px;
+                }
+            }
+        }
+
+        h3 {
+            order: 1;
+        }
+
+        .score-hero-body {
+            order: 2;
+        }
+    }
+
+    &.over-dark {
+        @include vertical-space(60px);
+
+        .score-hero-image {
+            img {
+            }
+        }
+
+        h2 {
+            color: $brainjocks-white;
+        }
+
+        h3 {
+            color: $brainjocks-white;
+        }
+
+        .score-hero-body {
+            color: $brainjocks-white;
+        }
+
+        .score-call-to-action {
+        }
+    }
+
+    &.left-energy-bar {
+        margin-left: 6px;
+        @media screen and (min-width: $screen-sm-min) {
+            margin-left: 0;
+        }
+
+        h3 {
+            position: relative;
+
+            &:before {
+                position: absolute;
+                top: 10px;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: calc(100% - 20px);
+                content: "";
+                transition: all .5s ease;
+                background: $brainjocks-primary;
+                @media screen and (min-width: $screen-sm-min) {
+                    top: 13px;
+                }
+            }
+        }
+
+        &.active {
+            h3 {
+                position: relative;
+
+                &:before {
+                    left: -21px;
+                    width: 6px;
+                }
+            }
+        }
+    }
+
+    &.job-description {
+        h2 {
+            font-family: $brainjocks-font-secondary;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 42px;
+            margin: 0 0 20px 0;
+            @media screen and (min-width: $screen-sm-min) {
+                font-size: 45px;
+                font-weight: 600;
+                line-height: 55px;
+                margin: 0 0 30px 0;
+            }
+        }
+
+        .score-hero-body {
+            ul {
+                padding: 0 20px;
+
+                li {
+                    margin-bottom: 5px;
+                }
+
+                & > li > ul {
+                    padding: 10px 20px;
+                }
+            }
+        }
+
+        &:last-of-type {
+            margin-bottom: 30px;
+            @media screen and (min-width: $screen-sm-min) {
+                margin-bottom: 60px;
+            }
+
+            .score-call-to-action {
+                margin-top: 40px;
+                @media screen and (min-width: $screen-sm-min) {
+                    margin-top: 70px;
+                }
+            }
+        }
+    }
+
+    .color-panels & {
+        h2 {
+            font-size: 40px;
+            line-height: 55px;
+            @media (min-width: $screen-sm-max) {
+                font-size: 45px;
+            }
+        }
+
+        .score-hero-body {
+            font-size: 20px;
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.client-stories-landing {
+    .full-width {
+        //fixing margins for desktop
+        @media screen and (min-width: $screen-md-min) {
+            .score-left {
+                & > .score-section-hero {
+                    margin-left: 15px;
+                }
+            }
+            .score-right {
+                & > .score-section-hero {
+                    margin-right: 15px;
+                }
+            }
+            .score-center {
+                & > .score-section-hero {
+                    margin-right: 15px;
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        .score-left, .score-right {
+            & > .score-section-hero {
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 30px;
+                padding: 70vw 65px 140px 65px;
+                background-color: #FFF;
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                @media screen and (min-width: $screen-xs-min) {
+                    padding: 70vw 35px 140px 35px;
+                }
+
+                &:before {
+                    position: absolute;
+                    z-index: 0;
+                    top: 60vw;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    display: block;
+                    content: "";
+                    background-color: #FFF;
+                }
+
+                .score-hero-image {
+                    position: relative;
+                    height: 60px;
+
+                    img {
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+
+                h3 {
+                    font-size: 32px;
+                    line-height: 1.2;
+                    position: relative;
+                    margin: 20px 0 30px 0;
+                }
+
+                .score-hero-body {
+                    position: relative;
+
+                    p {
+                        margin: 0 0 20px 0;
+
+                        strong {
+                            display: block;
+                        }
+                    }
+                }
+
+                .score-call-to-action {
+                    position: absolute;
+                    bottom: 65px;
+                    left: 65px;
+                }
+
+                @media screen and (min-width: $screen-md-min) {
+                    padding: 34vw 65px 140px 65px;
+                    &:before {
+                        top: 30vw;
+                    }
+                    h3 {
+                        font-size: 45px;
+                    }
+                }
+                @media screen and (min-width: $screen-lg-min) {
+                    padding: 460px 65px 140px 65px;
+                    &:before {
+                        top: 400px;
+                    }
+                }
+            }
+        }
+
+        .score-center {
+            @media screen and (max-width: $screen-sm-max) {
+                & > .score-section-hero {
+                    position: relative;
+                    overflow: hidden;
+                    margin-bottom: 30px;
+                    padding: 460px 65px 65px 65px;
+                    background-color: #FFF;
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+
+                    &:before {
+                        position: absolute;
+                        z-index: 0;
+                        top: 400px;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        display: block;
+                        content: "";
+                        background-color: #FFF;
+                    }
+
+                    .score-hero-image {
+                        height: 60px;
+
+                        img {
+                            width: auto;
+                            height: 100%;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 45px;
+                        line-height: 1.2;
+                        margin: 20px 0 30px 0;
+                    }
+
+                    .score-hero-body {
+                        p {
+                            margin: 0 0 20px 0;
+
+                            strong {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .score-call-to-action {
+                    }
+                }
+            }
+            @media screen and (min-width: $screen-md-min) {
+                & > .score-section-hero {
+                    position: relative;
+                    padding: 120px 110px 120px 33%;
+                    background-position: top left;
+                    background-size: cover;
+
+                    &:before {
+                        position: absolute;
+                        z-index: 0;
+                        top: 60px;
+                        right: 50px;
+                        bottom: 60px;
+                        left: 33%;
+                        display: block;
+                        content: "";
+                        background-color: #FFF;
+                    }
+
+                    .score-hero-image {
+                        position: relative;
+                        height: 60px;
+                        margin-left: 60px;
+
+                        img {
+                            width: auto;
+                            height: 100%;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 45px;
+                        line-height: 1.2;
+                        position: relative;
+                        margin: 20px 0 30px 60px;
+                    }
+
+                    .score-hero-body {
+                        position: relative;
+                        margin-left: 60px;
+
+                        p {
+                            margin: 0 0 20px 0;
+
+                            strong {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .score-call-to-action {
+                        position: relative;
+                        margin-left: 60px;
+                    }
+                }
+            }
+        }
+    }
+    .featured-client-story {
+        @media screen and (max-width: $screen-sm-max) {
+            .score-style-box.white {
+                .score-section-hero {
+                    position: relative;
+                    overflow: hidden;
+                    margin-bottom: 30px;
+                    //padding: 460px 65px 65px 65px;
+                    background-color: #FFF;
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+/*
+                    &:before {
+                        position: absolute;
+                        z-index: 0;
+                        top: 400px;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        display: block;
+                        content: "";
+                        background-color: #FFF;
+                    }
+*/
+                    .score-hero-image {
+                        height: 60px;
+
+                        img {
+                            width: auto;
+                            height: 100%;
+                        }
+                    }
+
+                    h2, h3 {
+                        font-size: 32px;
+                        line-height: 1.2;
+                        margin: 20px 0 30px 0;
+                    }
+
+                    .score-hero-body {
+                        p {
+                            margin: 0 0 20px 0;
+
+                            strong {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .score-call-to-action {
+                    }
+                }
+            }
+        }
+        @media screen and (min-width: $screen-md-min) {
+            .score-style-box.white {
+                .score-section-hero {
+                    position: relative;
+                    //padding: 120px 110px 120px 33%;
+                    background-position: top left;
+                    background-size: cover;
+/*
+                    &:before {
+                        position: absolute;
+                        z-index: 0;
+                        top: 60px;
+                        right: 50px;
+                        bottom: 60px;
+                        left: 33%;
+                        display: block;
+                        content: "";
+                        background-color: #FFF;
+                    }
+*/
+                    .score-hero-image {
+                        position: relative;
+                        height: 60px;
+                        margin-left: 60px;
+
+                        img {
+                            width: auto;
+                            height: 100%;
+                        }
+                    }
+
+                    h2, h3 {
+                        font-size: 45px;
+                        line-height: 1.2;
+                        position: relative;
+                        margin: 20px 0 30px 60px;
+                    }
+
+                    .score-hero-body {
+                        position: relative;
+                        margin-left: 60px;
+
+                        p {
+                            margin: 0 0 20px 0;
+
+                            strong {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .score-call-to-action {
+                        position: relative;
+                        margin-left: 60px;
+                    }
+                }
+            }
+        }      
+    }
+}
+
+.scroll-dot-indicators {
+    .score-section-hero {
+        @media (min-width: $screen-md-min) {
+            h2 {
+                font-size: 55px;
+            }
+        }
+    }
+}

@@ -1,0 +1,140 @@
+.default-multi-view-search-results{
+    &.score-tab {
+
+    }
+    .score-search-client {
+
+    }
+    .score-no-search-results {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .score-search-service-unavailable {
+        text-align: center;
+        margin-bottom: 10px;
+        clear: both;
+    }
+    .score-results-summary {
+
+    }
+    .score-search-results-view {
+        .search-results-list {
+            width: 100%;
+            display: block;
+            list-style: none;
+            padding: 0;
+            overflow: hidden; //keeps from collapsing due to floating elements. Use clearfix as an alternative
+            @media only screen and (max-width: 991px) {
+                margin-bottom: 40px;
+            }
+            @media only screen and (min-width: 992px) {
+                margin-bottom: 20px;
+            }
+            li {
+                position: relative;
+                list-style: none;
+                display: inline-block;
+                background-color: #fff;
+                border: 1px solid lightgray;
+                float: left;
+                margin-bottom: 20px;
+                padding: 10px 15px;
+                @media only screen and (min-width: 0) {
+                    width: 100%;
+                }
+                @media only screen and (min-width: 570px) {
+                    width: 48%;
+                    margin: 0 1% 20px 1%;
+                }
+                @media only screen and (min-width: 1200px) {
+                    width: 31.333%;
+                }
+                @media print {
+                    float: left;
+                    width: 31.333%;
+                }
+                &.promo-tile-li {
+                    background-color: transparent;
+                    .score-highlight {
+                        margin: 0;
+                    }
+                }
+                h2, h3, h4, h5, h6 {
+                    margin: 0 0 15px 0;
+                }
+            }
+        }
+        &.one-column {
+            .search-results-list  {
+                .score-quick-view {
+                    width: 100%;
+                }
+            }
+            .search-results-list > li {
+                width: 100%;
+
+                &.active {
+                    box-shadow: 24px 19px 49px -14px rgba(0,0,0,0.35);
+                }
+            }
+        }
+        &.two-column {
+            .search-results-list  {
+                .score-quick-view {
+                    width: 100%;
+                }
+            }
+            .search-results-list > li {
+                @media only screen and (min-width: 1200px) {
+                    width: 48%;
+                }
+                @media print {
+                    width: 48%;
+                }
+                &.active {
+                    box-shadow: 24px 19px 49px -14px rgba(0,0,0,0.35);
+                }
+            }
+        }
+        &.three-column {
+            .search-results-list {
+                .score-quick-view {
+                    width: 100%;
+                }
+            }
+            .search-results-list > li {
+                @media only screen and (min-width: 1200px) {
+                    width: 31.333%;
+                }
+                @media print {
+                    width: 31.333%;
+                }
+                &.active {
+                    box-shadow: 24px 19px 49px -14px rgba(0,0,0,0.35);
+                }
+            }
+        }
+        &.four-column {
+            .search-results-list  {
+                .score-quick-view {
+                    width: 100%;
+                }
+            }
+            .search-results-list > li {
+                @media only screen and (min-width: 1200px) {
+                    width: 23%;
+                }
+                @media print {
+                    width: 23%;
+                }
+            }
+        }
+    }
+    .score-no-search-results, .score-search-service-unavailable {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .score-search-service-unavailable {
+        clear: both;
+    }
+}

@@ -1,0 +1,23 @@
+.score-active-facets { //inherit default SCORE styles
+    @extend .default-active-facets;
+    & > div {
+
+    }
+    .score-facet-tag {
+
+        &:hover {
+
+        }
+    }
+    .icon {
+
+    }
+    .clear-all {
+
+    }
+    .facets {
+        .score-facet-tag {
+            
+        }
+    }
+}

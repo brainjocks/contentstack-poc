@@ -1,0 +1,188 @@
+﻿.score-style-box {
+    &.short-form {
+        @media screen and (min-width: $screen-sm-min) {
+            margin-right: -30px;
+        }
+    }
+
+    &.white {
+        padding: 15px;
+        background: $brainjocks-white;
+        margin-bottom: 30px;
+        @media screen and (min-width: $screen-xs-min) {
+            font-size: 30px;
+        }
+        @media screen and (min-width: $screen-sm-min) {
+            padding: 60px;
+        }
+
+        .score-section-hero {
+            margin-bottom: 0;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            h2, h3 {
+                margin-top: 0;
+                font-size: 40px;
+                @media screen and (min-width: $screen-xs-min) {
+                    font-size: 40px;
+                }
+
+            }
+            h2 {
+                font-size: 24px;
+                line-height: 1.3;
+                @media screen and (min-width: $screen-xs-min) {
+                    font-size: 40px;
+                }
+
+            }
+            h3 {
+                font-size: 24px;
+                line-height: 1.3;
+                @media screen and (min-width: $screen-xs-min) {
+                    font-size: 32px;
+                }
+
+            }
+        }
+
+        .score-youtube-video {
+            margin-bottom: 0;
+        }
+
+        .sticky-parent & {
+            height: auto;
+            margin-bottom: 60px;
+        }
+
+        .client-story-detail-page & {
+            .score-image {
+                margin: 0 auto;
+            }
+            @media screen and (min-width: $screen-sm-min) {
+                margin-right: 60px;
+            }
+
+        }
+
+        &.cover {
+            background-repeat: no-repeat;
+            background-position: 30px 30px;
+        }
+    }
+
+    .color-panels & {
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        flex: 1 1 100%;
+        justify-content: center;
+        //min-height: 400px;
+        margin-bottom: 0;
+        padding: 30px;
+        background-color: transparent;
+        @media (min-width: $screen-md-min) {
+            flex: 1 1 50%;
+            max-width: 50%;
+            min-height: 600px;
+            padding: 60px;
+        }
+    }
+
+    &.color-change {
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        flex: 1 1 100%;
+        justify-content: center;
+        margin-bottom: 0;
+        padding: 30px;
+        background-color: transparent;
+        @media (min-width: $screen-md-min) {
+            flex: 1 1 50%;
+            max-width: 50%;
+            min-height: 600px;
+            padding: 60px;
+        }
+
+        &.yellow {
+            background: transparent;
+            background-color: transparent;
+            background-image: linear-gradient(#69BE28, #CBE214);
+            background-position: 100% 0%;
+            background-size: 300% 300%;
+        }
+
+        &.blue {
+            background: transparent;
+            background-color: transparent;
+            background-image: linear-gradient(#00ADD0, #77E5FC);
+            background-position: 100% 0%;
+            background-size: 300% 300%;
+        }
+
+        &.pink {
+            background: transparent;
+            background-color: transparent;
+            background-image: linear-gradient(#ED347C, #FD7BAE);
+            background-position: 100% 0%;
+            background-size: 300% 300%;
+        }
+    }
+
+    .score-left &.extra-mobile-margin {
+        margin-bottom: 30px;
+        @media screen and (min-width: $screen-md-min) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.score-alert {
+    @extend .alert; //inherit bootstrap
+    @extend .alert-dismissable; //inherit bootstrap
+    @include vertical-space($vertical-spacing);
+}
+
+.score-panel {
+    @extend .panel; //inherit bootstrap
+    @extend .panel-default; //inherit bootstrap
+    @include vertical-space($vertical-spacing);
+
+    .panel-heading {
+        .panel-title {
+        }
+    }
+
+    .panel-body {
+    }
+
+    .panel-footer {
+    }
+}
+
+.score-well {
+    @extend .well; //inherit bootstrap
+    @include vertical-space($vertical-spacing);
+}
+
+.score-center-text {
+    @extend .text-center; //inherit bootstrap
+}
+
+.score-right-text {
+    @extend .text-right; //inherit bootstrap
+}
+
+.score-left-text {
+    @extend .text-left; //inherit bootstrap
+}
+
+.modal-dialog {
+    z-index: $zindex-modal;
+    margin: 250px auto 30px auto;
+}
+// EOF

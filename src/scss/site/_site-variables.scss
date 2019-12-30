@@ -1,0 +1,42 @@
+//Global custom variables
+
+//default margin on content components
+$vertical-spacing: 30px;
+
+//Global custom mixins
+@mixin vertical-space($margin) {
+	margin-bottom: $margin;
+}
+
+//== Media queries breakpoints
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+
+// Variables for rating stars
+$unchecked-star: '\2606';
+$unchecked-color: #CEC3A4;
+$checked-star: '\2605';
+$checked-color: #EBCA1B;
+
+// Color Variables
+$brainjocks-white: #FFFFFF;
+$brainjocks-black: #2B2B2B;
+$brainjocks-default: #0C2F41;
+$brainjocks-primary: rgb(0,173,208); //#00ADD0
+$brainjocks-primary-hover: darken($brainjocks-primary, 10%);
+$brainjocks-primary-active: darken($brainjocks-primary, 20%);
+$brainjocks-slate-gray: #8B8D8E;
+$brainjocks-gray: #EEEEEE;
+$brainjocks-red: #ff0000;
+$brainjocks-slate: #0C2F41;
+$brainjocks-slate-hover: darken($brainjocks-slate, 10%);
+$brainjocks-slate-active: darken($brainjocks-slate, 20%);
+
+//Fonts
+$brainjocks-font-primary: "Roboto", sans-serif;
+$brainjocks-font-secondary: "Barlow Condensed", sans-serif;

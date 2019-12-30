@@ -1,0 +1,52 @@
+footer {
+	position: relative;
+    width: 100%;
+    padding: 30px 15px;
+    margin-left: 0;
+    background: $brainjocks-white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
+    transition: all .4s ease;
+    @media screen and (min-width: $screen-sm-min) {
+        padding: 60px 0;
+    }
+    &.menu-open {
+        margin-left: -100%;
+        transition: all .7s ease;
+        transition-delay: .3s;
+        @media screen and (min-width: $screen-sm-min) {
+            margin-left: -300px;
+        }
+    }
+    .score-content-spot {
+        font-family: $brainjocks-font-primary;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 24px;
+        margin-bottom: 0;
+        @media screen and (min-width: $screen-sm-min) {
+        }
+        p {
+            margin-bottom: 0; 
+        }
+    }
+    .score-button-group {
+        .score-image-button {
+            display: inline-block;
+            float: none;
+            margin: 0 10px !important;
+            @media screen and (min-width: $screen-sm-min) {
+                margin: 0 15px;
+            }
+        }
+    }
+    .score-image-button {
+        img {
+            margin: 0 auto;
+        }
+    }
+    .score-composite-link {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

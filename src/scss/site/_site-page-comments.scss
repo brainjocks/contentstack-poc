@@ -1,0 +1,110 @@
+.score-comment-container {
+    @extend .default-comment-container; //inherit default SCORE styles
+
+    .score-comment-form {
+
+        &.extended {
+
+            .score-comment-area {
+            }
+
+            &.visible {
+
+                .score-comment-area {
+                }
+
+            }
+
+        }
+
+    }
+
+    .score-comment-area, .score-reply-area {
+    }
+
+    .score-comment-characters, .score-reply-characters {
+    }
+
+    .score-call-to-action {
+
+        .score-button {
+        }
+
+    }
+    .score-comment-actions {
+
+        .score-button {
+        }
+
+    }
+    .score-comment-body, .score-reply-body {
+
+        h4 {
+        }
+
+        small {
+        }
+
+        p {
+        }
+
+        .reply {
+        }
+
+    }
+
+    .score-comment-replies {
+    }
+
+    .score-reply-form {
+
+        &.visible {
+
+            textarea {
+            }
+
+        }
+
+        &.extended {
+        }
+
+        &.visible.extended {
+
+            textarea {
+            }
+
+        }
+
+    }
+
+    *[disabled] {
+    }
+
+}
+
+.comments-modal {
+    @extend .default-comment-container; //inherit default SCORE styles
+
+    .modal-title {
+    }
+
+    .modal-body {
+
+        textarea {
+        }
+
+    }
+
+}
+
+.limit-over {
+    @extend .default-limit-over; //inherit default SCORE styles
+}
+
+.score-comment-service-unavailable {
+    @extend .default-score-comment-service-unavailable; //inherit default SCORE styles
+}
+
+.submit-comment-wrapper {
+    @extend .default-submit-comment-wrapper; //inherit default SCORE styles
+}

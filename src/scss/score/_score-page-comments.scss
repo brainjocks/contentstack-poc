@@ -1,0 +1,160 @@
+.default-comment-container {
+    @extend .panel-footer;
+    .score-comment-form {
+        height: 38px;
+        position: relative;
+        overflow: hidden;
+        transition: all 1s;
+        -webkit-transition: all 1s; /* Safari */
+        background: #fff;
+        border: 1px solid #ced4da;
+        margin-bottom: 15px;
+        &.extended {
+            height: 200px;
+            .score-comment-area {
+                height: 145px;
+                transition: all 1s;
+                -webkit-transition: all 1s; /* Safari */
+                border-bottom: 1px solid #ced4da;
+            }
+            &.visible {
+                .score-comment-area {
+                    height: 145px;
+                    transition: all 1s;
+                    -webkit-transition: all 1s; /* Safari */
+                    border-bottom: 1px solid #ced4da;
+                }
+            }
+        }
+
+    }
+    .score-comment-area, .score-reply-area {
+        @extend .form-control;
+        min-height: 38px;
+        border: none;
+        border-radius: 0;
+        transition: all 1s;
+        -webkit-transition: all 1s; /* Safari */
+        border-bottom: 1px solid #ced4da;
+        resize: none;
+    }
+    .score-comment-characters, .score-reply-characters {
+        font-size: 12px;
+        float: left;
+        padding: 5px 10px;
+        //Tablet
+        @media only screen and (min-width: $screen-sm-min) {
+            font-size: 14px;
+        }
+        //Desktop
+        @media only screen and (min-width: $screen-md-min) {
+        }
+    }
+    .score-call-to-action {
+        float: right;
+        padding: 10px 0;
+        //Tablet
+        @media only screen and (min-width: $screen-sm-min) {
+        }
+        //Desktop
+        @media only screen and (min-width: $screen-md-min) {
+        }
+        .score-button {
+            padding: 4px 8px;
+            margin-right: 10px;
+            //Tablet
+            @media only screen and (min-width: $screen-sm-min) {
+            }
+            //Desktop
+            @media only screen and (min-width: $screen-md-min) {
+            }
+        }
+    }
+    .score-comment-actions {
+        float: right;
+        .score-button {
+            padding: 4px 8px;
+            letter-spacing: 1px;
+        }
+    }
+    .score-comment-body, .score-reply-body {
+        h4 {
+            margin-bottom: 5px;
+        }
+        small {
+            //display: block;
+            margin-bottom: 8px;
+        }
+        p {
+            word-wrap: break-word;
+        }
+        .reply {
+            @extend .btn-link;
+            padding: 0 0 10px 0;
+        }
+    }
+    .score-comment-replies {
+        padding: 0 0 10px 20px;
+    }
+    .score-reply-form {
+        display: block;
+        width: 100%;
+        height: 0;
+        position: relative;
+        overflow: hidden;
+        transition: all 1s;
+        -webkit-transition: all 1s; /* Safari */
+        background: #fff;
+        border: 1px solid #ced4da;
+        visibility: hidden;
+        &.visible {
+            display: block;
+            visibility: visible;
+            height: 38px;
+            transition: all 1s;
+            -webkit-transition: all 1s; /* Safari */
+            textarea {
+                width: 100%;
+            }
+        }
+        &.extended {
+            height: 200px;
+            border: 1px solid #ced4da;
+            transition: all 1s;
+            -webkit-transition: all 1s; /* Safari */
+        }
+        &.visible.extended {
+            textarea {
+                height: 145px;
+                transition: all 1s;
+                -webkit-transition: all 1s; /* Safari */
+                border-bottom: 1px solid #ced4da;
+                border-radius: 0;
+            }
+        }
+    }
+    *[disabled] {
+        pointer-events: none !important;
+    }
+}
+
+.default-comments-modal {
+    .modal-title {
+        float: left;
+    }
+    .modal-body {
+        textarea {
+            resize: vertical;
+        }
+    }
+}
+.default-limit-over {
+    color: #ff0000;
+}
+.default-score-comment-service-unavailable {
+    display: none;
+}
+.default-submit-comment-wrapper {
+    display:inline-block;
+    position:relative;
+}

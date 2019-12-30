@@ -1,0 +1,35 @@
+.brainjocks-services-page {
+    .sticky-parent {
+        padding: 0;
+
+        .score-column2.wide-right {
+            .score-left {
+                @media (min-width: $screen-sm-max) {
+                    position: -webkit-sticky;
+                    position: sticky;
+                    top: 0;
+                    height: 100vh;
+                    background-color: $brainjocks-white;
+                }
+                .score-style-box {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .score-right {
+                .score-style-box {
+                    padding: 60px 30px;
+
+                    .score-section-hero {
+                        @media (min-width: $screen-sm-max) {
+                            //height: calc(75vh - 60px);
+                            height: 80vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

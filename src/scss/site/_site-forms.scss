@@ -1,0 +1,289 @@
+form {
+    margin: 30px 0;
+    @media screen and (min-width: $screen-sm-min) {
+        margin: 60px 0;
+    }
+    .short-form & {
+        margin: 0;
+    }
+    h2 {
+        position: relative;
+        font-family: $brainjocks-font-secondary;
+        font-size: 45px;
+        font-weight: 600;
+        line-height: 55px;
+        margin-top: 0;
+        margin-bottom: 30px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            bottom: 0;
+            left: -21px;
+            width: 6px;
+            height: calc(100% - 20px);
+            margin-left: 7px;
+            background: $brainjocks-primary;
+            @media screen and (min-width: $screen-sm-min) {
+                top: 13px;
+                height: calc(100% - 20px);
+                margin-left: 0;
+            }
+        }
+    }
+    h3 {
+        font-family: $brainjocks-font-primary;
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 30px;
+        margin-top: 0;
+        margin-bottom: 15px !important;
+        &:last-of-type {
+            margin-bottom: 60px !important;
+        }
+    }
+    .form-group {
+        position: relative;
+        font-family: $brainjocks-font-primary;
+        font-size: 17px;
+        font-weight: normal;
+        line-height: 26px;
+        margin-bottom: 30px;
+        clear: both;
+        @media screen and (min-width: $screen-sm-min) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        &.recaptcha {
+            margin-bottom: 60px;
+
+            span {
+                &.field-validation-error {
+                    top: auto;
+                    right: auto;
+                    bottom: -25px;
+                    left: 0;
+                    @media screen and (max-width: $screen-xs-max) {
+                        display: block !important;
+                    }
+                    
+                    .short-form & {
+                        top: auto;
+                        right: auto;
+                        bottom: -25px;
+                        left: 0;
+                        @media screen and (min-width: $screen-md-min) {
+                            right: auto;
+                        }
+                    }
+                }
+            }
+        }
+        &.privacy {
+            .short-form & {
+                margin-bottom: 30px;
+                @media screen and (min-width: $screen-sm-min) {
+                    margin-bottom: 60px;
+                }
+            }
+            span {
+                &.field-validation-error {
+                    .short-form & {
+                        display: none;
+                    }
+                }
+            }
+        }
+    
+        a {
+            color: $brainjocks-primary;
+        }
+
+        &.privacy {
+            padding-left: 40px;
+            @media screen and (min-width: $screen-sm-min) {
+                width: calc(100% - 30px);
+                margin-top: -10px;
+            }
+            label {
+                position: absolute;
+                left: 0;
+                top: 5px;
+                display: block;
+                width: 25px;
+                height: 25px;
+                [type="checkbox"] {
+                    position: relative;
+                    width: 20px;
+                    height: 20px;
+                    padding: 0;
+                    margin: 0;
+                    background: url("../img/checkbox-inactive.svg") no-repeat center;
+                    background-size: 20px;
+                    cursor: pointer;
+                    border-radius: 0;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    z-index: 2;
+                    &:checked {
+                        background: url("../img/checkbox-active.svg") no-repeat center;
+                    }
+                    &:focus {
+                        outline: none !important;
+                    }
+                }
+            }
+            .field-validation-error {
+                display: none;
+            }
+        }
+
+        input, textarea {
+            color: $brainjocks-black;
+            font-size: 17px;
+            font-weight: normal;
+            font-family: $brainjocks-font-primary;
+            line-height: 26px;
+            width: 100%;
+            padding: 12px 10px;
+            margin-bottom: 0;
+            background-color: #F7F7F7;
+            border: 1px solid $brainjocks-slate-gray;
+            @media screen and (min-width: $screen-sm-min) {
+                font-size: 20px;
+                line-height: 30px;
+                padding: 15px 11px;
+            }
+            
+            &.valid {
+                color: $brainjocks-black;
+                background-color: $brainjocks-white;
+            }
+            &.input-validation-error {
+                border: 1px solid $brainjocks-red;
+            }
+            &[type="hidden"] {
+                display: none;
+                padding: 0;
+                margin: 0;
+                font-size: 0;
+            }
+            &:focus {
+                box-shadow: 0 0 10px 0 rgba(0,0,0,0.12);
+                outline: none;
+            }
+        }
+        textarea {
+            min-height: 150px;
+        }
+        label {
+            display: none;
+            margin: 0;
+        }
+    }
+    .first-name, 
+    .last-name, 
+    .email, 
+    .company {
+        display: inline-block;
+        float: left;
+        width: 100%;
+        clear: none !important;
+        @media screen and (min-width: $screen-md-min) {
+            width: 50%;
+        }
+        input {
+            width: 100%;
+            margin-bottom: 0;
+            @media screen and (min-width: $screen-sm-min) {
+                width: calc(100% - 30px);
+            }
+            @media screen and (min-width: $screen-md-min) {
+                width: calc(100% - 30px);
+            }
+        }
+    }
+    .form-privacy-description {
+        position: relative;
+        left: 40px;
+        display: block;
+        float: left;
+        text-align: left;
+        margin-left: 0;
+        z-index: 9;
+    }
+    [type="submit"] {
+        color: $brainjocks-white;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: $brainjocks-font-secondary;
+        line-height: 24px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        width: 100%;
+        padding: 13px 41px;
+        background-color: $brainjocks-primary;
+        border: 1px solid $brainjocks-primary;
+        -webkit-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        outline: none;
+        @media screen and (min-width: $screen-sm-min) {
+            width: auto;
+            width: unset; //IE fix
+        }
+        &:hover {
+            background: $brainjocks-primary-hover;
+            border: 1px solid $brainjocks-primary-hover;
+            -webkit-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+        }
+        &:active, &:focus {
+            background: $brainjocks-primary-active;
+            border: 1px solid $brainjocks-primary-active;
+            -webkit-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+        }
+    }
+    span.field-validation-error {
+        position: absolute;
+        top: -25px;
+        left: 0;
+        right: 0;
+        color: $brainjocks-red;
+        font-size: 12px;
+        font-weight: normal;
+        letter-spacing: normal;
+        text-align: right;
+        text-transform: uppercase;
+        @media screen and (max-width: $screen-xs-max) {
+            display: none;
+        }
+        .short-form & {
+            @media screen and (min-width: $screen-sm-min) {
+                right: 30px;
+            }
+        }
+        .recaptcha & {
+            left: 0;
+            right: auto;
+        }
+    }
+}
+
+//ie - modernizr sets this for ie
+.no-smil {
+    form {
+        .form-group.privacy label [type="checkbox"] {
+            &.input-validation-error {
+                outline: 1px solid red;
+                border-width: 0;
+            }
+        }
+    }
+}
+//

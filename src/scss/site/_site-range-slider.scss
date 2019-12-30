@@ -1,0 +1,53 @@
+.slider {
+  @extend .default-slider;
+  &.slider-horizontal {
+    .slider-track {
+      .slider-track-low {
+
+      }
+      .slider-selection {
+
+      }
+      .slider-track-high {
+
+      }
+    }
+      .tooltip {
+        &.tooltip-main.top.in {
+          .tooltip-arrow {
+
+          }
+          .tooltip-inner {
+
+          }
+        }
+        &.tooltip-min.top {
+          .tootip-arrow {
+
+          }
+          .tooltip-inner {
+
+          }
+        }
+        &.tootip-max.top {
+          .tootip-arrow {
+
+          }
+          .tooltip-inner {
+
+          }
+        }
+      }
+    .slider-handle {
+      &.min-slider-handle.round {
+
+      }
+      &.max-slider-handle.round {
+
+      }
+    }
+  }
+}
+.score-facet-range {
+
+}

@@ -1,0 +1,255 @@
+.score-stripe, .score-pic-stripe {
+    width: 100%;
+    padding: 60px 0;
+    border-radius: 0;
+}
+
+.score-stripe {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.small-spacing-bottom {
+        padding-bottom: 160px;
+        @media screen and (min-width: $screen-sm-min) {
+            padding-bottom: 160px;
+        }
+    }
+
+    &.big-spacing-bottom {
+        padding-bottom: 170px;
+        @media screen and (min-width: $screen-sm-min) {
+            padding-bottom: 360px;
+        }
+    }
+
+    &.spacer {
+        margin-bottom: 30px;
+        @media screen and (min-width: $screen-sm-min) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &.small-spacing {
+        padding: 30px;
+    }
+
+    &.black-overlay {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: "";
+            background: rgba(0, 0, 0, .3);
+        }
+    }
+
+    &.center-slider {
+        overflow: hidden;
+
+        .score-style-box {
+            width: auto;
+            max-width: 300px;
+            height: auto;
+            margin: 0;
+            @media (min-width: $screen-sm-min) {
+                max-width: 600px;
+                margin: 0 4px;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 0;
+            }
+        }
+
+        .slick-list {
+            overflow: visible;
+        }
+
+        .slick-slide {
+            &.slick-current {
+                &.slick-center {
+                    transition: all ease 0.4s;
+                    transform: scale(1.1);
+                    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+                    @media (min-width: $screen-md-min) {
+                        transform: scale(1.3);
+                    }
+                }
+            }
+
+            &.slick-active {
+                transition: all ease 0.4s;
+            }
+        }
+
+        /* slide when not active/center*/
+        .slick-slide,
+        .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
+            transition: transform 0.3s;
+        }
+
+        /* slide when active/center */
+        .slick-center,
+        .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"] {
+            transform: scale(1, 1);
+            @media (min-width: $screen-md-min) {
+                transform: scale(1.3);
+            }
+        }
+    }
+
+    &.content-max-height {
+        min-height: calc(100vh - 294px);
+    }
+
+    &.color-panels {
+        padding: 0;
+        @media (min-width: $screen-md-min) {
+            padding: 60px 15px 30px 15px;
+        }
+
+        .container {
+            @media (max-width: $screen-sm-max) {
+                padding: 0;
+                & > .score-column1,
+                & > .score-column3 {
+                    margin: 0 !important;
+                }
+            }
+        }
+
+        .score-column1 {
+            .score-column1 .score-center {
+                display: flex;
+                flex-flow: wrap row;
+                justify-content: flex-start;
+            }
+
+            .score-column1:nth-child(even) {
+                //This is for mobile views to change order of style boxes
+                // only on about us page
+                .score-center {
+                    @media (max-width: $screen-sm-max) {
+                        .score-style-box {
+                            min-height: 0;
+                        }
+                        .score-style-box:first-child {
+                            order: 2;
+                        }
+                        .score-style-box:last-child {
+                            order: 1;
+                        }
+                    }
+                }
+            }
+            // reorder boxed on mobile sizes
+            // when ther are more boxes - up to 6
+            .mobile-switch {
+                @media (max-width: $screen-sm-max) {
+                    .score-style-box {
+                        min-height: 0;
+                    }
+                    .score-style-box:first-child {
+                        order: 1;
+                    }
+                    .score-style-box:nth-child(2) {
+                        order: 2;
+                    }
+                    .score-style-box:nth-child(3) {
+                        order: 4;
+                    }
+                    .score-style-box:nth-child(4) {
+                        order: 3;
+                    }
+                    .score-style-box:nth-child(5) {
+                        order: 5;
+                    }
+                    .score-style-box:nth-child(6) {
+                        order: 6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.score-pic-stripe {
+    &.black-overlay {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: "";
+            background: rgba(0, 0, 0, .3);
+        }
+    }
+
+    .error-page & {
+        min-height: calc(100vh - 294px);
+    }
+}
+
+.score-pic-stripe.picture-field-720-right,
+.score-stripe.picture-field-720-right {
+    min-height: 622px;
+    padding: 30px 5px 30px 5px;
+    background-position: right bottom;
+    @media (min-width: $screen-md-min) {
+        min-height: 720px;
+        padding: 60px;
+        background-position: center bottom;
+    }
+}
+
+.score-pic-stripe.picture-field-720-left,
+.score-stripe.picture-field-720-left{
+    min-height: 622px;
+    padding: 30px 5px 30px 5px;
+    background-position: left bottom;
+    @media (min-width: $screen-md-min) {
+        min-height: 720px;
+        padding: 60px;
+        background-position: center bottom;
+    }
+}
+
+// better adjust hero width
+@media (min-width: $screen-sm-min) {
+    .score-pic-stripe.picture-field-720-left,
+    .score-pic-stripe.picture-field-720-right,
+    .score-stripe.picture-field-720-left,
+    .score-stripe.picture-field-720-right{
+        div[class^="score-column"] {
+            .score-column2.equal {
+                & > .score-left,
+                & > .score-right {
+                    float: left;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+.our-clients {
+    .score-slick-slider .slick-prev {
+        background-image: url('../img/nav_arrow_prev.png');
+    }
+
+    .score-slick-slider .slick-next {
+        background-image: url('../img/nav_arrow-next.png');
+    }
+}

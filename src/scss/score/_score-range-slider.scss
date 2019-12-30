@@ -1,0 +1,77 @@
+@import "../bootstrap/bootstrap-slider";
+
+.default-slider {
+  &.slider-horizontal {
+    .slider-track {
+      .slider-track-low {
+        background-image: -webkit-linear-gradient(top,#999999 0,#f5f5f5 100%);
+        background-image: -o-linear-gradient(top,#999999 0,#f5f5f5 100%);
+        background-image: linear-gradient(to bottom,#999999 0,#f5f5f5 100%);
+      }
+      .slider-selection {
+        background-image: -webkit-linear-gradient(top,#149bdf 0,#0480be 100%);
+        background-image: -o-linear-gradient(top,#149bdf 0,#0480be 100%);
+        background-image: linear-gradient(to bottom,#149bdf 0,#0480be 100%);
+      }
+      .slider-track-high {
+        background-image: -webkit-linear-gradient(top,#999999 0,#f5f5f5 100%);
+        background-image: -o-linear-gradient(top,#999999 0,#f5f5f5 100%);
+        background-image: linear-gradient(to bottom,#999999 0,#f5f5f5 100%);
+      }
+    }
+    .tooltip {
+      &.tooltip-main.top.in {
+        .tooltip-arrow {
+
+        }
+        .tooltip-inner {
+          color: #0B8BCC;
+          background-color: #F4F4F4;
+          border: 1px solid #333;
+        }
+      }
+      &.tooltip-min.top {
+        .tootip-arrow {
+
+        }
+        .tooltip-inner {
+
+        }
+      }
+      &.tootip-max.top {
+        .tootip-arrow {
+
+        }
+        .tooltip-inner {
+
+        }
+      }
+    }
+    .slider-handle {
+      &.min-slider-handle.round {
+        border: 2px solid #f4f4f4;
+        background-color: #337ab7;
+        background-image: -webkit-linear-gradient(top,#149bdf 0,#0480be 100%);
+        background-image: -o-linear-gradient(top,#149bdf 0,#0480be 100%);
+        background-image: linear-gradient(to bottom,#555 0,#999 100%);
+        webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.07);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.07);
+      }
+      &.max-slider-handle.round {
+        border: 2px solid #f4f4f4;
+        background-color: #337ab7;
+        background-image: -webkit-linear-gradient(top,#149bdf 50%,#0480be 100%);
+        background-image: -o-linear-gradient(top,#149bdf 0,#0480be 100%);
+        background-image: linear-gradient(to bottom,#555 50%,#999 100%);
+        webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.07);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.07);
+      }
+    }
+  }
+}
+.score-facet-range {
+
+}
+b {
+  margin: 0 6px;
+}

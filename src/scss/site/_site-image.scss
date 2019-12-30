@@ -1,0 +1,15 @@
+.score-image {
+    @include vertical-space($vertical-spacing);
+    @media screen and (min-width: $screen-sm-min) {
+        @include vertical-space(60px);
+    }
+}
+.client-story-detail-page {
+    .content-energy-bar-trigger {
+        .score-center-text {
+            img {
+                display: inline-block;
+            }
+        }
+    }
+}

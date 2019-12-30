@@ -1,0 +1,541 @@
+header {
+    position: sticky;
+    position: -webkit-sticky;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: all 0.5s ease;
+    border: 1px solid $brainjocks-white;
+    background-color: $brainjocks-white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
+    @media screen and (min-width: $screen-md-min) {
+        //top: -120px;
+    }
+
+    > .container {
+        -ms-overflow-y: hidden;
+        overflow-y: hidden;
+        height: 64px;
+        @media screen and (min-width: $screen-md-min) {
+            height: 120px;
+        }
+    }
+
+    &.push-out {
+        top: -66px !important;
+        transition: all 0.75s ease;
+        @media screen and (min-width: $screen-md-min) {
+            top: -122px !important;
+        }
+    }
+
+    &.push-in {
+        top: 0 !important;
+        transition: all 0.75s ease;
+    }
+
+    &.menu-open {
+        &.push-out,
+        &.push-in {
+            top: 0 !important;
+        }
+    }
+
+    .mode-preview & {
+        position: relative;
+        z-index: 1;
+    }
+
+    div[class^="score-column"],
+    div[class*=" score-column"] {
+        &.score-column1 {
+            > .score-center {
+                position: static;
+            }
+        }
+    }
+
+    .navbar-header {
+        position: static;
+        float: none;
+        height: 64px;
+        padding-top: 30px;
+        @media screen and (min-width: $screen-md-min) {
+            height: 120px;
+        }
+        /*
+                .navbar-toggle {
+                    position: absolute;
+                    top: 41px;
+                    right: 15px;
+                    display: block;
+                    margin: 0 0 20px 0;
+                    border: none;
+                    background: transparent !important;
+                    @media screen and (min-width: $screen-sm-min) {
+                        right: 30px;
+                    }
+                    @media screen and (min-width: $screen-md-min) {
+                        right: 70px;
+                    }
+
+                    .icon-bar {
+                        width: 26px;
+                        height: 4px;
+                        margin-bottom: 5px;
+                        transition: all 0.3s ease;
+                        background: #747678;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    &[aria-expanded="true"] {
+                        span {
+                            opacity: 0;
+
+                            &:nth-child(2) {
+                                transform: translate(0, 5px) rotate(45deg);
+                                opacity: 1;
+                            }
+
+                            &:last-child {
+                                transform: translate(0, -13px) rotate(-45deg);
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+        */
+        .navbar-brand {
+            font-size: 0;
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            float: left;
+            width: 120px;
+            height: auto;
+            margin-left: 0;
+            padding: 0;
+            @media screen and (min-width: $screen-md-min) {
+                top: auto;
+                width: auto;
+            }
+            @media screen and (min-width: 1400px) {
+                margin-left: -45px;
+            }
+
+            img {
+                width: 234px;
+                height: 70px;
+            }
+        }
+    }
+
+    .score-megamenu {
+        position: static;
+
+        .navbar-toggle {
+            position: absolute;
+            top: 21px;
+            right: 15px;
+            display: block;
+            width: 16px;
+            height: 30px;
+            margin: 0 0 20px 0;
+            padding: 0px;
+            cursor: pointer;
+            border: none;
+            border-style: none;
+            outline: none;
+            background-color: transparent;
+            @media screen and (min-width: $screen-sm-min) {
+                right: 30px;
+                width: 26px;
+            }
+            @media screen and (min-width: $screen-md-min) {
+                top: 41px;
+                right: 70px;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: transparent;
+            }
+
+            span.icon-bar {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 4px;
+                margin: 0 !important;
+                transition: all 0.5s ease;
+                border-radius: 2px;
+                background-color: #747678;
+            }
+
+            span:nth-child(2) {
+                top: 0px;
+                left: 0px;
+            }
+
+            span:nth-child(3) {
+                top: 9px;
+                right: 0px;
+            }
+
+            span:nth-child(4) {
+                top: 18px;
+                left: 0px;
+            }
+
+            &:not(.collapsed) span:nth-child(3) {
+                animation: span2 1.5s forwards cubic-bezier(0.8, 0.5, 0.2, 1.4);
+            }
+        }
+
+        @keyframes span2 {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            20% {
+                width: 5px;
+                border-radius: 50%;
+                transform: translate(0, 0) scale(1);
+            }
+            40% {
+                width: 5px;
+                border-radius: 50%;
+                transform: translate(0, 0) scale(1);
+            }
+            50% {
+                width: 5px;
+                border-radius: 50%;
+                transform: translate(0, 18px) scale(1);
+            }
+            80% {
+                width: 5px;
+                border-radius: 50%;
+                transform: translate(0, -16px) scale(1);
+            }
+            100% {
+                width: 5px;
+                border-radius: 50%;
+                transform: translate(0, 100px) scale(0);
+            }
+        }
+
+        .navbar-toggle:not(.collapsed) span:nth-child(4) {
+            animation: span3 0.8s forwards cubic-bezier(0.8, 0.5, 0.2, 1.4);
+            animation-delay: 0.7s;
+        }
+
+        @keyframes span3 {
+            0% {
+                transform: translate(0, 0);
+            }
+            60% {
+                transform: rotate(80deg) translate(-7px, -7px);
+            }
+            100% {
+                transform: rotate(45deg) translate(-6px, -6px);
+            }
+        }
+
+        .navbar-toggle:not(.collapsed) span:nth-child(2) {
+            animation: span1 0.8s forwards cubic-bezier(0.8, 0.5, 0.2, 1.4);
+            animation-delay: 1.1s;
+        }
+
+        @keyframes span1 {
+            0% {
+                transform: translate(0, 0);
+            }
+            60% {
+                transform: rotate(-110deg) translate(-7px, -7px);
+            }
+            100% {
+                transform: rotate(-45deg) translate(-7px, 7px);
+            }
+        }
+
+        .navbar-toggle span:nth-child(2) {
+            animation: span1_close 0.8s forwards cubic-bezier(0.8, 0.5, 0.2, 1.4);
+        }
+
+        @keyframes span1_close {
+            0% {
+                transform: rotate(-45deg) translate(-11px, 11px);
+            }
+            100% {
+                transform: rotate(0deg) translate(0, 0);
+            }
+        }
+
+        .navbar-toggle span:nth-child(3) {
+            animation: span2_close 0.8s forwards cubic-bezier(0.8, 0.5, 0.2, 1.4);
+        }
+
+        @keyframes span2_close {
+            0% {
+                transform: translate(0, 20px) scale(0);
+            }
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+        }
+
+        .navbar-toggle span:nth-child(4) {
+            animation: span3_close 0.8s forwards cubic-bezier(0.8, 0.5, 0.2, 1.4);
+        }
+
+        @keyframes span3_close {
+            0% {
+                transform: rotate(45deg) translate(-7px, -7px);
+            }
+            100% {
+                transform: rotate(0deg) translate(0, 0);
+            }
+        }
+
+        .navbar-collapse {
+            padding: 0;
+
+            &.collapse {
+                position: fixed;
+                top: 66px;
+                right: -100%;
+                bottom: 0;
+                display: none !important;
+                overflow: hidden;
+                width: 0;
+                height: 0;
+                background-color: $brainjocks-black;
+                @media screen and (min-width: $screen-md-min) {
+                    top: 122px;
+                }
+
+                &.in {
+                    right: 0;
+                    display: block !important;
+                    overflow: auto !important;
+                    width: 100%;
+                    height: auto;
+                    transition: all 0.2s ease;
+                    background-color: $brainjocks-black;
+                    @media screen and (min-width: $screen-sm-min) {
+                        width: 300px;
+                    }
+                }
+
+                .navbar-nav {
+                    > li {
+                        right: 0;
+                        opacity: 1;
+
+                        &.active {
+                            > a {
+                                text-decoration: none;
+                                color: $brainjocks-gray;
+                                background-color: $brainjocks-primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .navbar-nav {
+            float: none;
+            margin: 0;
+
+            > li {
+                position: relative;
+                right: -100%;
+                float: none;
+                transition: all 0.5s ease-in-out;
+                opacity: 0;
+
+                > a {
+                    font-family: $brainjocks-font-secondary;
+                    font-size: 22px;
+                    font-weight: 600;
+                    line-height: 30px;
+                    float: none;
+                    padding: 10px 30px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    color: #EEEEEE;
+                    @media screen and (min-width: $screen-sm-min) {
+                        font-size: 28px;
+                        line-height: 36px;
+                        padding: 12px 30px;
+                    }
+
+                    &:hover {
+                        text-decoration: none;
+                        color: #EEEEEE;
+                        background-color: $brainjocks-primary;
+                    }
+
+                    &:active,
+                    &:focus {
+                        text-decoration: none;
+                        color: #EEEEEE;
+                        background-color: $brainjocks-primary;
+                    }
+                }
+            }
+
+            .score-megamenu-dropdown {
+                overflow: hidden;
+                width: 100%;
+                border: none;
+
+                &:hover,
+                &:focus,
+                &.active {
+                    background: $brainjocks-primary;
+                }
+
+                &.open {
+                    color: $brainjocks-white;
+                    border: none;
+                    background-color: $brainjocks-primary;
+
+                    > a {
+                        color: $brainjocks-white !important;
+                        background: transparent !important;
+
+                        &:hover,
+                        &:focus,
+                        &.active {
+                            background: transparent;
+                        }
+                    }
+
+                    .dropdown-toggle.toggle-caret {
+                        .caret {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                > a {
+                    float: left;
+
+                    &:hover,
+                    &:focus,
+                    &.active {
+                        color: $brainjocks-white;
+                        background: transparent !important;
+                    }
+                }
+
+                .dropdown-toggle.toggle-caret {
+                    position: static;
+                    background-color: transparent !important;
+
+                    &:hover,
+                    &:focus,
+                    &.active {
+                        background: transparent !important;
+                    }
+
+                    .caret {
+                        position: absolute;
+                        top: 22px;
+                        right: 30px;
+                        width: 18px;
+                        height: 11px;
+                        transition: all ease 0.4s;
+                        transform: rotate(0deg);
+                        border: none;
+                        background: transparent url("../img/icon-caret-white.svg") no-repeat center;
+                        background-size: 18px 11px;
+                    }
+                }
+
+                .dropdown-menu {
+                    position: static;
+                    width: 100%;
+                    padding: 10px 0;
+                    border: none;
+                    background-color: #000000;
+
+                    .score-menu-list-item {
+                        > a {
+                            font-family: $brainjocks-font-secondary;
+                            font-size: 20px;
+                            font-weight: 600;
+                            line-height: 24px;
+                            float: none;
+                            padding: 10px 60px 10px 30px;
+                            letter-spacing: 1px;
+                            color: $brainjocks-white;
+                            background: transparent;
+
+                            &:hover,
+                            &:focus,
+                            &.active {
+                                color: $brainjocks-primary;
+                                background: transparent;
+                            }
+                        }
+
+                        &.active {
+                            > a {
+                                color: $brainjocks-primary;
+                            }
+                        }
+                    }
+
+                    .dropdown-submenu {
+                        > a {
+                            font-family: $brainjocks-font-secondary;
+                            font-size: 20px;
+                            font-weight: 600;
+                            line-height: 24px;
+                            float: none;
+                            padding: 10px 60px 10px 30px;
+                            white-space: normal;
+                            letter-spacing: 1px;
+                            color: $brainjocks-white;
+                            background: transparent;
+
+                            &:after {
+                                display: none;
+                            }
+
+                            &:hover,
+                            &:focus,
+                            &.active {
+                                color: $brainjocks-primary;
+                                background: transparent;
+                            }
+                        }
+
+                        &.active {
+                            > a {
+                                color: $brainjocks-primary;
+                            }
+                        }
+
+                        .dropdown-menu {
+                            position: static;
+                            display: block;
+                            margin-left: 20px;
+                            padding: 0;
+                            border: none;
+                            background-color: #000000;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

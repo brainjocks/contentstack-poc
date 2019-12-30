@@ -1,0 +1,29 @@
+.score-search-box {
+    @extend .default-search-box; //inherit default SCORE styles
+    .clear-input {
+        
+    }
+    .twitter-typeahead {
+        input {
+
+        }
+        .tt-hint, .tt-input {
+
+        }
+        .tt-menu {
+
+        }
+        .score-typeahead-header {
+
+        }
+        .score-typeahead-content {
+
+        }
+        .score-typeahead-footer {
+
+        }
+    }
+    .button {
+
+    }
+}

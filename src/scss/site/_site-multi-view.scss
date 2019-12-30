@@ -1,0 +1,94 @@
+.score-multi-view-search-results {
+    @extend .default-multi-view-search-results;
+    &.score-tab {
+
+    }
+    .score-search-client {
+
+    }
+    .score-no-search-results {
+
+    }
+    .score-search-service-unavailable {
+
+    }
+    .score-results-summary {
+
+    }
+    .score-search-results-view {
+        .search-results-list {
+
+            @media only screen and (max-width: 991px) {
+
+            }
+            @media only screen and (min-width: 992px) {
+
+            }
+            li {
+
+                @media only screen and (min-width: 0) {
+
+                }
+                @media only screen and (min-width: 570px) {
+
+                }
+                @media only screen and (min-width: 1200px) {
+
+                }
+                @media print {
+
+                }
+                &.promo-tile-li {
+
+                    .score-highlight {
+
+                    }
+                }
+                h2, h3, h4, h5, h6 {
+
+                }
+            }
+        }
+        &.one-column {
+            .search-results-list > li {
+
+            }
+        }
+        &.two-column {
+            .search-results-list > li {
+                @media only screen and (min-width: 1200px) {
+
+                }
+                @media print {
+
+                }
+            }
+        }
+        &.three-column {
+            .search-results-list > li {
+                @media only screen and (min-width: 1200px) {
+
+                }
+                @media print {
+
+                }
+            }
+        }
+        &.four-column {
+            .search-results-list > li {
+                @media only screen and (min-width: 1200px) {
+
+                }
+                @media print {
+
+                }
+            }
+        }
+    }
+    .score-no-search-results, .score-search-service-unavailable {
+
+    }
+    .score-search-service-unavailable {
+
+    }
+}

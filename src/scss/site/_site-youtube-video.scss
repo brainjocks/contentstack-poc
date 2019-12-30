@@ -1,0 +1,21 @@
+.score-youtube-video, .score-vimeo-video, .score-kaltura-video, .score-birghtcove-video {
+    @include vertical-space($vertical-spacing);
+    @extend .embed-responsive;
+}
+.embed-responsive {
+	
+}
+.score-kaltura-video {
+    margin-bottom: 30px;
+    padding: 0;
+    .kaltura-wrapper {
+        height: 360px;
+    }
+}
+.bc-player-default_default {
+    width: 100%;
+    height: 360px;
+    font-size: 14px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}

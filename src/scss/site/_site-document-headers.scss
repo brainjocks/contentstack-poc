@@ -1,0 +1,48 @@
+.score-document-header {
+    // @extend .page-header; //inherit bootstrap
+    @include vertical-space(44px);
+    .score-header-image {
+        img {
+
+        }
+    }
+    h1 {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 50px;
+        @include vertical-space($vertical-spacing);
+        
+        @media screen and (min-width: $screen-sm-min) {
+            font-size: 60px;
+            line-height: 72px;
+        }
+    }
+    h2 {
+        font-size: 17px;
+        line-height: 26px;
+        font-weight: normal;
+        @include vertical-space(20px);
+
+        @media screen and (min-width: $screen-sm-min) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}
+.score-document-header-with-subtitle {
+    // @extend .page-header; //inherit bootstrap
+    // @include vertical-space($vertical-spacing);
+    .score-header-image {
+        img {
+
+        }
+    }
+    h1 {
+        small {
+
+        }
+    }
+    h2 {
+
+    }
+}
