@@ -1,14 +1,14 @@
 import React from "react"
 
-const PageColumn4Equal = (props) => {
+const PageColumn3Wide = (props) => {
   return (
     <div className='container'>
-      <div className='score-column equal'>
+      <div className='score-column3 wide-middle'>
         {props.children}
       </div>
     </div>
   )
 }
 
-export default PageColumn4Equal
+export default PageColumn3Wide
 

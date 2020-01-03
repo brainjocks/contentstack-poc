@@ -2,8 +2,10 @@
     // @extend .page-header; //inherit bootstrap
     @include vertical-space(44px);
     .score-header-image {
+        line-height: 0;
+        font-size: 0;
         img {
-
+            line-height: 0;
         }
     }
     h1 {
