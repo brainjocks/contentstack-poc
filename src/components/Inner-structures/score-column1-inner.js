@@ -1,6 +1,6 @@
 import React from "react"
 
-const PageColumn1Inner = (props) => {
+const InnerColumn1 = (props) => {
   return (
       <div className='score-column1'>
         <div className="score-center">
@@ -10,4 +10,4 @@ const PageColumn1Inner = (props) => {
   )
 }
 
-export default PageColumn1Inner
+export default InnerColumn1

@@ -3,6 +3,14 @@
 
     .score-hero-image {
         img {
+            display: none;
+        }
+
+        img[src*='/static'] {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 24px;
         }
     }
 
@@ -40,6 +48,14 @@
 
     .score-hero-image {
         img {
+            display: none;
+        }
+
+        img[src*='/static'] {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 24px;
         }
     }
 
@@ -66,11 +82,19 @@
     }
 
     .score-hero-image {
-        margin-bottom: 24px;
+        &:empty {
+            display: none;
+        }
 
         img {
+            display: none;
+        }
+
+        img[src*='/static'] {
+            display: block;
             max-width: 100%;
             height: auto;
+            margin-bottom: 24px;
         }
     }
 
@@ -500,6 +524,7 @@
             }
         }
     }
+
     .featured-client-story {
         @media screen and (max-width: $screen-sm-max) {
             .score-style-box.white {
@@ -511,19 +536,19 @@
                     background-color: #FFF;
                     background-repeat: no-repeat;
                     background-size: 100% auto;
-/*
-                    &:before {
-                        position: absolute;
-                        z-index: 0;
-                        top: 400px;
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
-                        display: block;
-                        content: "";
-                        background-color: #FFF;
-                    }
-*/
+                    /*
+                                        &:before {
+                                            position: absolute;
+                                            z-index: 0;
+                                            top: 400px;
+                                            right: 0;
+                                            bottom: 0;
+                                            left: 0;
+                                            display: block;
+                                            content: "";
+                                            background-color: #FFF;
+                                        }
+                    */
                     .score-hero-image {
                         height: 60px;
 
@@ -561,19 +586,19 @@
                     //padding: 120px 110px 120px 33%;
                     background-position: top left;
                     background-size: cover;
-/*
-                    &:before {
-                        position: absolute;
-                        z-index: 0;
-                        top: 60px;
-                        right: 50px;
-                        bottom: 60px;
-                        left: 33%;
-                        display: block;
-                        content: "";
-                        background-color: #FFF;
-                    }
-*/
+                    /*
+                                        &:before {
+                                            position: absolute;
+                                            z-index: 0;
+                                            top: 60px;
+                                            right: 50px;
+                                            bottom: 60px;
+                                            left: 33%;
+                                            display: block;
+                                            content: "";
+                                            background-color: #FFF;
+                                        }
+                    */
                     .score-hero-image {
                         position: relative;
                         height: 60px;
@@ -611,7 +636,7 @@
                     }
                 }
             }
-        }      
+        }
     }
 }
 
