@@ -22,7 +22,7 @@
         display: none;
     }
 
-    img[src*='/static'] {
+    img[src*='/'] {
         display: block;
         max-width: 50%;
         margin: 0 0 30px;
