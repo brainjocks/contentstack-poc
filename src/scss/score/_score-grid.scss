@@ -85,7 +85,15 @@ div[class^="score-column"], div[class*=" score-column"] {
 	            @media print {
 	            	@include make-xs-column($grid-columns/3);	
 	            }
-			}	
+			}
+			&.flex {
+				display: flex;
+				.score-center,
+				.score-left,
+				.score-right {
+					display: flex;
+				}
+			}
 		}
 		&.wide-middle {
 			& > .score-left {

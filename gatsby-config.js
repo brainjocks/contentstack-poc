@@ -16,14 +16,14 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass",
-    // 'gatsby-plugin-react-helmet',
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Brainjocks.com using Contentstack',
         short_name: 'BJ',
         start_url: '/',
-        icon: 'src/img/brainjocks-logo-2019.png',
+        icon: 'src/img/apple-touch-icon.png',
       },
     },
     {
@@ -34,6 +34,19 @@ module.exports = {
         'environment': process.env.CONTENTSTACK_ENVIRONMENT
       },
     },
-    // 'gatsby-plugin-offline'
-  ],
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto`,
+            variants: [`400`, `400i`, `700`, `700i`,]
+          },
+          {
+            family: `Barlow+Condensed`,
+            variants: [`400`, `600`, `700`]
+          },
+        ],
+      },
+    },  ],
 }

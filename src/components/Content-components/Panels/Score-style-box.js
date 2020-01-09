@@ -1,5 +1,6 @@
 import React from "react"
 import classnames from "classnames"
+import PropTypes from "prop-types"
 
 
 const StyleBox = (props) => {
@@ -8,6 +9,14 @@ const StyleBox = (props) => {
       {props.children}
     </div>
   )
+}
+
+StyleBox.proptype = {
+  styleName: PropTypes.string,
+  backgroundImage: PropTypes.string,
+  color: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  children: PropTypes.node
 }
 
 export default StyleBox

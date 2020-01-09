@@ -1,5 +1,6 @@
 import React from "react"
 import classnames from 'classnames';
+import PropTypes from "prop-types"
 
 const Stripe = (props) => {
   return (
@@ -7,6 +8,13 @@ const Stripe = (props) => {
       {props.children}
     </div>
   )
+}
+Stripe.proptype = {
+  color: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  styleName: PropTypes.string,
+  backgroundImage: PropTypes.string,
+  children: PropTypes.node
 }
 
 export default Stripe
