@@ -136,6 +136,8 @@ header {
 
     .score-megamenu {
         position: static;
+        border: none;
+        background-color: $brainjocks-white;
 
         .navbar-toggle {
             position: absolute;

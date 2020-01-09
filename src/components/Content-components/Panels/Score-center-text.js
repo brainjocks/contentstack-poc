@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 
 const CenterText = (props) => {
@@ -7,6 +8,10 @@ const CenterText = (props) => {
       {props.children}
     </div>
   )
+}
+
+CenterText.proptype = {
+  children: PropTypes.node
 }
 
 export default CenterText

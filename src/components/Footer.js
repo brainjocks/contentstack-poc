@@ -13,12 +13,12 @@ import Instagram from "../img/instagram-icon.svg"
 import CompositeBtn from "./Content-components/Buttons/Score-composite-link"
 
 const socialButton = [
-   {
+  {
     imgSrc: Twitter,
     href: "https://twitter.com/BrainJocks",
     alt: "twitter logo",
   },
-   {
+  {
     imgSrc: Facebook,
     href: "https://www.facebook.com/brainjocks/",
     alt: "facebook logo",
@@ -28,7 +28,7 @@ const socialButton = [
     href: "https://www.linkedin.com/company/brainjocks",
     alt: "linkedin logo",
   },
-   {
+  {
     imgSrc: Youtube,
     href: "https://www.youtube.com/channel/UCUyyk_pBFlpEmpA_erHurvg",
     alt: "youtube logo",
@@ -37,7 +37,7 @@ const socialButton = [
     imgSrc: Instagram,
     href: "https://www.instagram.com/brainjocks/?hl=en",
     alt: "instagram logo",
-  }
+  },
 ]
 
 const Footer = () => {
@@ -56,7 +56,7 @@ const Footer = () => {
                     <ImageBtn href={item.href} src={item.imgSrc} alt={item.alt} key={index}/>
                   )
                 })}
-                 </BtnGroup>
+              </BtnGroup>
             </CenterText>
           </div>
           <div className="score-right">

@@ -1,5 +1,6 @@
 import React from "react"
 import classnames from "classnames"
+import PropTypes from "prop-types"
 
 const Highlight = (props) => {
   return (
@@ -19,6 +20,15 @@ const Highlight = (props) => {
       </div>
     </div>
   )
+}
+
+Highlight.proptype = {
+  styleName: PropTypes.string,
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  heading: PropTypes.string,
+  body: PropTypes.string,
+  children: PropTypes.node
 }
 
 export default Highlight

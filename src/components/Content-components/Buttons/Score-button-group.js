@@ -1,5 +1,6 @@
 import React from "react"
 import classnames from "classnames"
+import PropTypes from "prop-types"
 
 const BtnGroup = (props) => {
   return (
@@ -7,6 +8,12 @@ const BtnGroup = (props) => {
       {props.children}
     </div>
   )
+}
+
+
+BtnGroup.proptype = {
+  styleName: PropTypes.string,
+  children: PropTypes.node
 }
 
 export default BtnGroup

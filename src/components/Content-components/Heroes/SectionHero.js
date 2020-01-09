@@ -1,5 +1,6 @@
 import React from "react"
 import classnames from "classnames"
+import PropTypes from "prop-types"
 
 const SectionHero = (props) => {
   return (
@@ -19,6 +20,16 @@ const SectionHero = (props) => {
       </div>
     </div>
   )
+}
+
+SectionHero.proptype = {
+  styleName: PropTypes.string,
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  h2: PropTypes.string,
+  h3: PropTypes.string,
+  body: PropTypes.string,
+  children: PropTypes.node
 }
 
 export default SectionHero

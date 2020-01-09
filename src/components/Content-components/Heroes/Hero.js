@@ -1,5 +1,6 @@
 import React from "react"
 import classnames from "classnames"
+import PropTypes from "prop-types"
 
 const Hero = (props) => {
   return (
@@ -19,6 +20,16 @@ const Hero = (props) => {
       </div>
     </div>
   )
+}
+
+Hero.proptype = {
+  styleName: PropTypes.string,
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  h1: PropTypes.string,
+  h2: PropTypes.string,
+  body: PropTypes.string,
+  children: PropTypes.node
 }
 
 export default Hero
