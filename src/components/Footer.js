@@ -46,55 +46,51 @@ const Footer = () => {
     <footer>
       <PageColumn1>
         <InnerColumn3Wide
-          left={
-            <ImageBtn href={`#`} src={Logo} alt={`logo image`}/>
-          }
+          left={<ImageBtn href={`#`} src={Logo} alt={`logo image`} />}
           center={
             <CenterText>
               <BtnGroup>
                 {socialButton.map((item, index) => {
                   return (
-                    <ImageBtn href={item.href} src={item.imgSrc} alt={item.alt} key={index}/>
+                    <ImageBtn
+                      href={item.href}
+                      src={item.imgSrc}
+                      alt={item.alt}
+                      key={index}
+                    />
                   )
                 })}
               </BtnGroup>
             </CenterText>
           }
-          right={
-            [<ContentSpot 
+          right={[
+            <ContentSpot
               key='ca0d4306-25da-4354-9076-2b52821aa75b'
               children={
                 <p>
                   13560 Morris Road, Suite 3300,
-                  <br/>
+                  <br />
                   Alpharetta, GA 30004
-                  <br/>
-                  Phone:<a href="tel:770-924-6444" className="mobile-visible">
-                </a>
-                  <span className="desktop-visible">
-                   770-924-6444
-                </span>
+                  <br />
+                  Phone:
+                  <a href="tel:770-924-6444" className="mobile-visible"></a>
+                  <span className="desktop-visible">770-924-6444</span>
                 </p>
               }
             />,
-              <CompositeBtn
-              key='8c0e90fd-bc1a-4e84-906c-6274b290c697'
-                href={`https://brainjocks.com/contact-us`}
-                text={`Contact Us`}/>,
-              <ContentSpot
-              key='59c412f0-73a5-4553-8d30-8b598fdbcd2e'
-                children={
-                  <p>
-                    © Brainjocks. All rights reserved.
-                  </p>
-                }
-              />,
-              <CompositeBtn
-              key='173bc51d-6f9e-4d16-85ba-2b5ba658a517'
-                href={`https://brainjocks.com/privacy`}
-                text={`Privacy Policy`}/>
-            ]
-          }/>
+            <CompositeBtn
+              key='8c0e90fd-bc1a-4e84-906c-6274b290c697'href={`https://brainjocks.com/contact-us`}
+              text={`Contact Us`}
+            />,
+            <ContentSpot
+              key='59c412f0-73a5-4553-8d30-8b598fdbcd2e'children={<p>© Brainjocks. All rights reserved.</p>}
+            />,
+            <CompositeBtn key='173bc51d-6f9e-4d16-85ba-2b5ba658a517'
+              href={`https://brainjocks.com/privacy`}
+              text={`Privacy Policy`}
+            />,
+          ]}
+        />
       </PageColumn1>
     </footer>
   )
