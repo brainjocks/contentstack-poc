@@ -61,7 +61,8 @@ const Footer = () => {
             </CenterText>
           }
           right={
-            [<ContentSpot
+            [<ContentSpot 
+              key='ca0d4306-25da-4354-9076-2b52821aa75b'
               children={
                 <p>
                   13560 Morris Road, Suite 3300,
@@ -77,9 +78,11 @@ const Footer = () => {
               }
             />,
               <CompositeBtn
+              key='8c0e90fd-bc1a-4e84-906c-6274b290c697'
                 href={`https://brainjocks.com/contact-us`}
                 text={`Contact Us`}/>,
               <ContentSpot
+              key='59c412f0-73a5-4553-8d30-8b598fdbcd2e'
                 children={
                   <p>
                     © Brainjocks. All rights reserved.
@@ -87,6 +90,7 @@ const Footer = () => {
                 }
               />,
               <CompositeBtn
+              key='173bc51d-6f9e-4d16-85ba-2b5ba658a517'
                 href={`https://brainjocks.com/privacy`}
                 text={`Privacy Policy`}/>
             ]

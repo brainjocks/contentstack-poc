@@ -3,15 +3,12 @@ import PropTypes from "prop-types"
 import Footer from "./Footer"
 import Header from "./Nav"
 
-
-const Layout = ( props ) => {
+const Layout = props => {
   return (
     <div>
-      <Header/>
-      <div className='page-wrapper'>
-        {props.children}
-      </div>
-      <Footer/>
+      <Header />
+      <div className="page-wrapper">{props.children}</div>
+      <Footer />
     </div>
   )
 }
@@ -21,4 +18,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-

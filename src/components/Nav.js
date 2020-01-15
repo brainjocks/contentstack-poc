@@ -3,7 +3,6 @@ import bjlogo from "../img/brainjocks-logo-holiday.svg"
 import { Link } from "gatsby"
 import PageColumn1 from "./Page-structures/score-column1-page"
 
-
 const links = [
   { href: "/", text: "Home" },
   { href: "/about", text: "About" },
@@ -14,15 +13,17 @@ class Header extends Component {
   constructor(props) {
     super(props)
 
-    if ( typeof window !== "undefined" ) {
+    if (typeof window !== "undefined") {
       let prevScrollpos = window.pageYOffset
       window.onscroll = function() {
         const maxScroll = document.body.clientHeight - window.innerHeight
         let currentScrollPos = window.pageYOffset
         if (
-          (maxScroll > 0 && prevScrollpos > currentScrollPos && prevScrollpos <= maxScroll)
-          || (maxScroll <= 0 && prevScrollpos > currentScrollPos)
-          || (prevScrollpos <= 0 && currentScrollPos <= 0)
+          (maxScroll > 0 &&
+            prevScrollpos > currentScrollPos &&
+            prevScrollpos <= maxScroll) ||
+          (maxScroll <= 0 && prevScrollpos > currentScrollPos) ||
+          (prevScrollpos <= 0 && currentScrollPos <= 0)
         ) {
           document.getElementById("navbar").style.top = "0"
         } else {
@@ -45,8 +46,11 @@ class Header extends Component {
   }
 
   render() {
-    const classDropdownMenu = "navbar-collapse collapse" + (this.state.collapsed ? " " : " in")
-    const buttonToggle = "score-hamburger navbar-toggle" + (!this.state.collapsed ? "" : " collapsed")
+    const classDropdownMenu =
+      "navbar-collapse collapse" + (this.state.collapsed ? " " : " in")
+    const buttonToggle =
+      "score-hamburger navbar-toggle" +
+      (!this.state.collapsed ? "" : " collapsed")
     return (
       <header id="navbar">
         <PageColumn1>
@@ -55,22 +59,27 @@ class Header extends Component {
               <div className="score-nav">
                 <div className="navbar-header score-navbar-header">
                   <button onClick={this.toggleNavbar} className={buttonToggle}>
-                    <span className="sr-only">
-                    </span>
+                    <span className="sr-only"></span>
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                   </button>
-                  <Link to='/' className='navbar-brand'>
-                    <img src={bjlogo} alt='brainjocks logo' className='image-responsive'/>
+                  <Link to="/" className="navbar-brand">
+                    <img
+                      src={bjlogo}
+                      alt="brainjocks logo"
+                      className="image-responsive"
+                    />
                   </Link>
                 </div>
                 <div className={classDropdownMenu}>
                   <div className="nav navbar-nav score-nav">
                     {links.map((item, index) => {
                       return (
-                        <li className='score-megamenu-basic-item' key={index}>
-                          <Link to={item.href} className={item.className}>{item.text}</Link>
+                        <li className="score-megamenu-basic-item" key={index}>
+                          <Link to={item.href} className={item.className}>
+                            {item.text}
+                          </Link>
                         </li>
                       )
                     })}
