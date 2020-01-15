@@ -1,8 +1,8 @@
 import React from "react"
 
-const PageColumn2WideLeft = (props) => {
+const PageColumn2WideLeftFullWidth = (props) => {
   return (
-    <div className='container'>
+    <div className='container full-width'>
       <div className='score-column2 wide-left'>
         <div className="score-left">{props.left}</div>
         <div className="score-right">{props.right}</div>
@@ -11,4 +11,4 @@ const PageColumn2WideLeft = (props) => {
   )
 }
 
-export default PageColumn2WideLeft
+export default PageColumn2WideLeftFullWidth
