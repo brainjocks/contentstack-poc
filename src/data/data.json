@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "styleName": "picture-field-720-left",
+    "backgroundImage": "/Users/mikebaker/projects/contentstack-poc/src/img/blue-background-girl.jpg",
+    "color": "#FFFFFF",
+    "h1": "H1 Text",
+    "h2": "",
+    "body": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+    "btnText": "Learn More",
+    "btnStyleName": "over-dark",
+    "btnHref": "#"
+  },
+  "centerSectionHero": {
+    "styleName": "",
+    "backgroundColor": "#0C2F41",
+    "backgroundImage": "/Users/mikebaker/projects/contentstack-poc/src/img/blue-background-girl.jpg",
+    "color": "#FFFFFF",
+    "heroStyleName": "left-energy-bar active",
+    "h2": "",
+    "h3": "Section Hero",
+    "body": "What makes Brainjocks unique? We don't just build great\n experiences, we partner with our clients and enable them to make the most of their\n platform and digital assets. Our approach provides the architecture and the\n operational transformation needed for your team to be efficient, empowered and most\n importantly, effective.",
+    "btnText": "",
+    "btnStyleName": "",
+    "btnHref": ""
+  },
+  "cards": [
+    {
+      "title": "MarTech Enablement",
+      "body": "Living in a tech focused world? No need to treat marketing as a side kick! Get your campaigns rolling with a seamlessly integrated MarTech solution from Brainjocks. With our enablement approach, your content assemblers and marketers are empowered to drive campaign after campaign, all the way to success!"
+    },
+    {
+      "img": "../img/procter_and_gamble-logo.png",
+      "imgAlt": "procter gamble logo",
+      "title": "Deliver Content at Scale",
+      "body": "Learn how Brainjocks drastically improved the content authoring experience for Procter &amp; Gamble and allowed them to deliver global content at scale, quickly and efficiently.",
+      "buttonText": "Learn More",
+      "buttonLInk": "https://brainjocks.com",
+      "buttonText2": "Find out More",
+      "buttonLInk2": "https://brainjocks.com"
+    },
+    {
+      "background": "../img/quotation-mark.png",
+      "body": "Brainjocks has addressed a number of marketing pain points. Content teams can now create, share and repurpose content globally — saving us time, money and frustration."
+    },
+    {
+      "img": "../img/sage_logo.png",
+      "imgAlt": "sage gamble logo",
+      "title": "Silos Block Innovation and Slow Delivery—So Tear Them Down!",
+      "body": "Brainjocks worked with Sage to define a seamless, cross functional operational model. The creation of a mastersite of core content also accelerated delivery while also facilitating consistency in brand and messaging across the markets. Read more about this \"follow the sun\" approach to digital transformation."
+    }
+  ]
+}

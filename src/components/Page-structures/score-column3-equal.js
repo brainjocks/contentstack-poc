@@ -5,7 +5,9 @@ const PageColumn3Equal = (props) => {
   return (
     <div className='container'>
       <div className={classnames('score-column3 equal', props.styleName)}>
-          {props.children}
+        <div className="score-left">{props.left}</div>
+        <div className="score-center">{props.center}</div>
+        <div className="score-right">{props.right}</div>
       </div>
     </div>
   )

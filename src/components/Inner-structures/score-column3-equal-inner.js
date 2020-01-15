@@ -3,7 +3,9 @@ import React from "react"
 const InnerColumn3Equal = (props) => {
   return (
     <div className='score-column3 equal'>
-      {props.children}
+      <div className="score-left">{props.left}</div>
+      <div className="score-center">{props.center}</div>
+      <div className="score-right">{props.right}</div>
     </div>
   )
 }
