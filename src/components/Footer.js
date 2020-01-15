@@ -11,6 +11,7 @@ import Linkedin from "../img/linkedin-icon.svg"
 import Youtube from "../img/youtube-icon svg.svg"
 import Instagram from "../img/instagram-icon.svg"
 import CompositeBtn from "./Content-components/Buttons/Score-composite-link"
+import ContentSpot from "./Content-components/Score-content-spot"
 
 const socialButton = [
   {
@@ -44,11 +45,11 @@ const Footer = () => {
   return (
     <footer>
       <PageColumn1>
-        <InnerColumn3Wide>
-          <div className="score-left">
+        <InnerColumn3Wide
+          left={
             <ImageBtn href={`#`} src={Logo} alt={`logo image`}/>
-          </div>
-          <div className="score-center">
+          }
+          center={
             <CenterText>
               <BtnGroup>
                 {socialButton.map((item, index) => {
@@ -58,30 +59,38 @@ const Footer = () => {
                 })}
               </BtnGroup>
             </CenterText>
-          </div>
-          <div className="score-right">
-            <div className="score-content-spot">
-              <p>
-                13560 Morris Road, Suite 3300,
-                <br/>
-                Alpharetta, GA 30004
-                <br/>
-                Phone:<a href="tel:770-924-6444" className="mobile-visible">
-              </a>
-                <span className="desktop-visible">
+          }
+          right={
+            [<ContentSpot
+              children={
+                <p>
+                  13560 Morris Road, Suite 3300,
+                  <br/>
+                  Alpharetta, GA 30004
+                  <br/>
+                  Phone:<a href="tel:770-924-6444" className="mobile-visible">
+                </a>
+                  <span className="desktop-visible">
                    770-924-6444
                 </span>
-              </p>
-            </div>
-            <CompositeBtn href={`https://brainjocks.com/contact-us`} text={`Contact Us`}/>
-            <div className="score-content-spot">
-              <p>
-                © Brainjocks. All rights reserved.
-              </p>
-            </div>
-            <CompositeBtn href={`https://brainjocks.com/privacy`} text={`Privacy Policy`}/>
-          </div>
-        </InnerColumn3Wide>
+                </p>
+              }
+            />,
+              <CompositeBtn
+                href={`https://brainjocks.com/contact-us`}
+                text={`Contact Us`}/>,
+              <ContentSpot
+                children={
+                  <p>
+                    © Brainjocks. All rights reserved.
+                  </p>
+                }
+              />,
+              <CompositeBtn
+                href={`https://brainjocks.com/privacy`}
+                text={`Privacy Policy`}/>
+            ]
+          }/>
       </PageColumn1>
     </footer>
   )
