@@ -1,7 +1,5 @@
 import React from "react"
 import Stripe from "../components/Stripe"
-import { graphql } from 'gatsby'
-
 import heroImage from "../img/turtle-on-back-900.png"
 import heroImageSectionTwo from "../img/dogs-on-motocycle-900.png"
 import pressbox from "../img/pressbox-tile-image.jpg"
@@ -177,13 +175,13 @@ export default () => {
               <Highlight
                 styleName={`left-energy-bar active`}
                 heading={`MarTech Consulting`}
-                key="0747a1cd-8f5e-437e-9e92-27c8d99a6c01"
+                key={`0747a1cd-8f5e-437e-9e92-27c8d99a6c01`}
                 body={`Working together to understand your business, stated goals, company roadmap and operational model to select right-fit solutions.`}
               />,
               <Highlight
                 styleName={`left-energy-bar active`}
                 heading={`Software development`}
-                key="7418ee2a-7b7f-40fd-a698-f74d3762e6d0"
+                key={`7418ee2a-7b7f-40fd-a698-f74d3762e6d0`}
                 body={`Working together to understand your business, stated goals, company roadmap and operational model to select right-fit solutions.`}
               />,
             ]}
@@ -191,13 +189,13 @@ export default () => {
               <Highlight
                 styleName={`left-energy-bar active`}
                 heading={`Software development`}
-                key="24e119b8-322a-4fb7-9ac5-3501c7084f2a
+                key={`24e119b8-322a-4fb7-9ac5-3501c7084f2a`}
                 body={`Working together to understand your business, stated goals, company roadmap and operational model to select right-fit solutions.`}
               />,
               <Highlight
                 styleName={`left-energy-bar active`}
                 heading={`Software development`}
-                key="b152c7f8-5d2b-40ed-8876-253608d1c5f9"
+                key={`b152c7f8-5d2b-40ed-8876-253608d1c5f9`}
                 body={`Working together to understand your business, stated goals, company roadmap and operational model to select right-fit solutions.`}
               />,
             ]}
@@ -282,9 +280,14 @@ export default () => {
           children={
             <BtnGroup
               children={[
-                <Btn key='29a77d0f-3c15-44c5-a688-c82a2ee3b2e4' text={`Learn More`} href={`#`} styleName={`over-dark`} />,
                 <Btn
-                  key='305947cc-ec93-4ca7-93fa-c0992c209ff2'
+                  key={`29a77d0f-3c15-44c5-a688-c82a2ee3b2e4`}
+                  text={`Learn More`}
+                  href={`#`}
+                  styleName={`over-dark`}
+                />,
+                <Btn
+                  key={`305947cc-ec93-4ca7-93fa-c0992c209ff2`}
                   text={`See all open jobs`}
                   href={`#`}
                   styleName={`over-dark-hollow`}
