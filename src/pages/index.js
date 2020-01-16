@@ -1,38 +1,38 @@
-import React from "react"
-import Stripe from "../components/Stripe"
-import heroImage from "../img/turtle-on-back-900.png"
-import heroImageSectionTwo from "../img/dogs-on-motocycle-900.png"
-import pressbox from "../img/pressbox-tile-image.jpg"
-import brainjuice from "../img/brainjuice-tile-image.jpg"
-import jocks from "../img/jocks-to-the-core-tile-image.jpg"
-import lastSectionHero from "../img/careers-shoe-background.jpg"
-import "../scss/main.scss"
-import Layout from "../components/Layout"
-import PageColumn3Wide from "../components/Page-structures/score-column3-wide"
-import SectionHero from "../components/Content-components/Heroes/SectionHero"
-import StyleBox from "../components/Content-components/Panels/Score-style-box"
-import Highlight from "../components/Content-components/Features/Highlights"
-import PageColumn1 from "../components/Page-structures/score-column1-page"
-import CenterText from "../components/Content-components/Panels/Score-center-text"
-import InnerColumn2Equal from "../components/Inner-structures/score-column2-equal-inner"
-import InnerColumn1 from "../components/Inner-structures/score-column1-inner"
-import Btn from "../components/Content-components/Buttons/Score-button"
-import InnerColumn3Wide from "../components/Inner-structures/score-column3-wide-inner"
-import BtnGroup from "../components/Content-components/Buttons/Score-button-group"
-import PageColumn3Equal from "../components/Page-structures/score-column3-equal"
-import Head from "../components/Head"
-import HeroLeft from "../components/Section-components/Hero-left"
-import SectionHeroCenter from "../components/Section-components/Section-hero-center"
-import SectionHeroRight from "../components/Section-components/Section-hero-right"
-import StickySectionRight from "../components/Section-components/Sticky-section-right"
-import StickySectionLeft from "../components/Section-components/Sticky-section-left"
-import { graphql, useStaticQuery } from "gatsby"
-import data from "../data/data.json"
+import React from 'react'
+import Stripe from '../components/Stripe'
+import heroImage from '../img/turtle-on-back-900.png'
+import heroImageSectionTwo from '../img/dogs-on-motocycle-900.png'
+import pressbox from '../img/pressbox-tile-image.jpg'
+import brainjuice from '../img/brainjuice-tile-image.jpg'
+import jocks from '../img/jocks-to-the-core-tile-image.jpg'
+import lastSectionHero from '../img/careers-shoe-background.jpg'
+import '../scss/main.scss'
+import Layout from '../components/Layout'
+import PageColumn3Wide from '../components/Page-structures/score-column3-wide'
+import SectionHero from '../components/Content-components/Heroes/SectionHero'
+import StyleBox from '../components/Content-components/Panels/Score-style-box'
+import Highlight from '../components/Content-components/Features/Highlights'
+import PageColumn1 from '../components/Page-structures/score-column1-page'
+import CenterText from '../components/Content-components/Panels/Score-center-text'
+import InnerColumn2Equal from '../components/Inner-structures/score-column2-equal-inner'
+import InnerColumn1 from '../components/Inner-structures/score-column1-inner'
+import Btn from '../components/Content-components/Buttons/Score-button'
+import InnerColumn3Wide from '../components/Inner-structures/score-column3-wide-inner'
+import BtnGroup from '../components/Content-components/Buttons/Score-button-group'
+import PageColumn3Equal from '../components/Page-structures/score-column3-equal'
+import Head from '../components/Head'
+import HeroLeft from '../components/Section-components/Hero-left'
+import SectionHeroCenter from '../components/Section-components/Section-hero-center'
+import SectionHeroRight from '../components/Section-components/Section-hero-right'
+import StickySectionRight from '../components/Section-components/Sticky-section-right'
+import StickySectionLeft from '../components/Section-components/Sticky-section-left'
+import { graphql, useStaticQuery } from 'gatsby'
+import data from '../data/data.json'
 
-let heroStripeColor = "#FFFFFF"
-let stripeColor = "#FFFFFF"
-let sectionColor = "#0C2F41"
-let section2Color = "#EEEEEE"
+let heroStripeColor = '#FFFFFF'
+let stripeColor = '#FFFFFF'
+let sectionColor = '#0C2F41'
+let section2Color = '#EEEEEE'
 
 export default () => {
   const dataSet = useStaticQuery(graphql`

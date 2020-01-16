@@ -4,10 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-console.log(`Using environment config: '${process.env.NODE_ENV}'`);
+console.log(`Using environment config: '${process.env.NODE_ENV}'`)
 
 require('dotenv').config({
-  path: '.env.${process.env.NODE_ENV}'
+  path: '.env.${process.env.NODE_ENV}',
 })
 
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
     title: 'Brainjocks.com + Contentstack',
   },
   plugins: [
-    "gatsby-plugin-sass",
+    'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
@@ -27,11 +27,11 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-contentstack",
-      options:{
-        'api_key': process.env.CONTENTSTACK_API_KEY,
-        'delivery_token': process.env.CONTENTSTACK_DELIVERY_TOKEN,
-        'environment': process.env.CONTENTSTACK_ENVIRONMENT
+      resolve: 'gatsby-source-contentstack',
+      options: {
+        api_key: process.env.CONTENTSTACK_API_KEY,
+        delivery_token: process.env.CONTENTSTACK_DELIVERY_TOKEN,
+        environment: process.env.CONTENTSTACK_ENVIRONMENT,
       },
     },
     {
@@ -40,13 +40,14 @@ module.exports = {
         fonts: [
           {
             family: `Roboto`,
-            variants: [`400`, `400i`, `700`, `700i`,]
+            variants: [`400`, `400i`, `700`, `700i`],
           },
           {
             family: `Barlow+Condensed`,
-            variants: [`400`, `600`, `700`]
+            variants: [`400`, `600`, `700`],
           },
         ],
       },
-    },  ],
+    },
+  ],
 }

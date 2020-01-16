@@ -1,11 +1,11 @@
-import React from "react"
-import "../scss/main.scss"
-import Layout from "../components/Layout"
-import Head from "../components/Head"
-import Stripe from "../components/Stripe"
-import background from "../img/chamelion.jpg"
-import HeroRight from "../components/Section-components/Hero-right"
-import Btn from "../components/Content-components/Buttons/Score-button"
+import React from 'react'
+import '../scss/main.scss'
+import Layout from '../components/Layout'
+import Head from '../components/Head'
+import Stripe from '../components/Stripe'
+import background from '../img/chamelion.jpg'
+import HeroRight from '../components/Section-components/Hero-right'
+import Btn from '../components/Content-components/Buttons/Score-button'
 
 export default () => (
   <Layout>

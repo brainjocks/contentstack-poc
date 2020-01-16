@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react'
 
-const PageColumn2WideLeft = (props) => {
+const PageColumn2WideLeft = props => {
   return (
-    <div className='container'>
-      <div className='score-column2 wide-left'>
+    <div className="container">
+      <div className="score-column2 wide-left">
         <div className="score-left">{props.left}</div>
         <div className="score-right">{props.right}</div>
       </div>

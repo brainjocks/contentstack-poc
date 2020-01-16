@@ -1,11 +1,11 @@
-import React from "react"
-import classnames from "classnames"
-import PropTypes from "prop-types"
+import React from 'react'
+import classnames from 'classnames'
+import PropTypes from 'prop-types'
 
 const Stripe = props => {
   return (
     <section
-      className={classnames("score-stripe", props.styleName)}
+      className={classnames('score-stripe', props.styleName)}
       style={{
         backgroundImage: `url(${props.backgroundImage})`,
         color: props.color,

@@ -1,23 +1,19 @@
-import React from "react"
-import classnames from "classnames"
-import PropTypes from "prop-types"
+import React from 'react'
+import classnames from 'classnames'
+import PropTypes from 'prop-types'
 
-const Hero = (props) => {
+const Hero = props => {
   return (
-    <div className={classnames("score-hero", props.styleName)}>
-      <div className='score-hero-image'>
-        <img src={props.src} alt={props.alt}/>
+    <div className={classnames('score-hero', props.styleName)}>
+      <div className="score-hero-image">
+        <img src={props.src} alt={props.alt} />
       </div>
       <h1>{props.h1}</h1>
       <h2>{props.h2}</h2>
-      <div className='score-hero-body'>
-        <p>
-          {props.body}
-        </p>
+      <div className="score-hero-body">
+        <p>{props.body}</p>
       </div>
-      <div className='score-call-to-action'>
-        {props.children}
-      </div>
+      <div className="score-call-to-action">{props.children}</div>
     </div>
   )
 }
@@ -29,7 +25,7 @@ Hero.proptype = {
   h1: PropTypes.string,
   h2: PropTypes.string,
   body: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
 }
 
 export default Hero
