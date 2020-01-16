@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import bjlogo from '../img/brainjocks-logo-holiday.svg'
+import bjlogo from '../img/brainjocks-logo.svg'
 import { Link } from 'gatsby'
 import PageColumn1 from './Page-structures/score-column1-page'
 
