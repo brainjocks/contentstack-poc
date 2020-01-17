@@ -36,25 +36,38 @@ let section2Color = '#EEEEEE'
 
 export default () => {
   const dataSet = useStaticQuery(graphql`
-    query {
-      contentstackHomePage {
-        hero_section {
-          style
-          h1
-          h2
-          hero_body_text
-          background_color
-          background_image {
-            url
-          }
-          button_text
-          button_link {
-            href
-          }
-          button_style
+  query {
+    contentstackHomePage {
+      hero_section {
+        style
+        h1
+        h2
+        body
+        background_color
+        background_image {
+          url
         }
+        button_text
+        button_link {
+          href
+        }
+        button_style
+      }
+      center_hero_section{
+        background_color
+        color
+        hero_style
+        h2
+        h3
+        body
+        button_text
+        button_link {
+          href
+        }
+        button_style
       }
     }
+  }
   `)
   return (
     <Layout>
@@ -64,12 +77,12 @@ export default () => {
         backgroundImage={
           dataSet.contentstackHomePage.hero_section.background_image.url
         }
-        color={data.hero.background_image}
+        backgroundColor={dataSet.contentstackHomePage.hero_section.background_color}
       >
         <HeroLeft
           h1={dataSet.contentstackHomePage.hero_section.h1}
           h2={dataSet.contentstackHomePage.hero_section.h2}
-          body={dataSet.contentstackHomePage.hero_section.hero_body_text}
+          body={dataSet.contentstackHomePage.hero_section.body}
           children={
             <Btn
               text={dataSet.contentstackHomePage.hero_section.button_text}
@@ -80,13 +93,13 @@ export default () => {
         />
       </Stripe>
       <Stripe
-        backgroundColor={data.centerSectionHero.backgroundColor}
-        color={data.centerSectionHero.color}
+        backgroundColor={dataSet.contentstackHomePage.center_hero_section.background_color}
+        color={dataSet.contentstackHomePage.center_hero_section.color}
       >
         <SectionHeroCenter
-          styleName={data.centerSectionHero.heroStyleName}
-          h3={data.centerSectionHero.h3}
-          body={data.centerSectionHero.body}
+          styleName={dataSet.contentstackHomePage.center_hero_section.hero_style}
+          h3={dataSet.contentstackHomePage.center_hero_section.h3}
+          body={dataSet.contentstackHomePage.center_hero_section.body}
         />
       </Stripe>
       <Stripe styleName={`sticky-parent`} backgroundColor={section2Color}>
