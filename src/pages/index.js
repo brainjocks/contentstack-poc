@@ -39,17 +39,19 @@ export default () => {
     query {
       contentstackHomePage {
         hero_section {
-          h1_text
-          h2_text
+          style
+          h1
+          h2
           hero_body_text
-          hero_background_image {
+          background_color
+          background_image {
             url
           }
           button_text
           button_link {
             href
           }
-          button_style_name
+          button_style
         }
       }
     }
@@ -58,23 +60,21 @@ export default () => {
     <Layout>
       <Head title="Home" />
       <Stripe
-        styleName={data.hero.styleName}
+        styleName={dataSet.contentstackHomePage.hero_section.style}
         backgroundImage={
-          dataSet.contentstackHomePage.hero_section.hero_background_image.url
+          dataSet.contentstackHomePage.hero_section.background_image.url
         }
-        color={data.hero.color}
+        color={data.hero.background_image}
       >
         <HeroLeft
-          h1={dataSet.contentstackHomePage.hero_section.h1_text}
+          h1={dataSet.contentstackHomePage.hero_section.h1}
           h2={dataSet.contentstackHomePage.hero_section.h2}
           body={dataSet.contentstackHomePage.hero_section.hero_body_text}
           children={
             <Btn
               text={dataSet.contentstackHomePage.hero_section.button_text}
               href={dataSet.contentstackHomePage.hero_section.button_link.href}
-              styleName={
-                dataSet.contentstackHomePage.hero_section.button_style_name
-              }
+              styleName={dataSet.contentstackHomePage.hero_section.button_style}
             />
           }
         />
