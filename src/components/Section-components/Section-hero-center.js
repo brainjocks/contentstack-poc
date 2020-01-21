@@ -3,6 +3,9 @@ import SectionHero from '../Content-components/Heroes/SectionHero'
 import PageColumn3Wide from '../Page-structures/score-column3-wide'
 
 const SectionHeroCenter = props => {
+  if (!props) {
+    return null
+  }
   return (
     <PageColumn3Wide
       center={

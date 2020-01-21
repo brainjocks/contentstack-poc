@@ -36,38 +36,38 @@ let section2Color = '#EEEEEE'
 
 export default () => {
   const dataSet = useStaticQuery(graphql`
-  query {
-    contentstackHomePage {
-      hero_section {
-        style
-        h1
-        h2
-        body
-        background_color
-        background_image {
-          url
+    query {
+      contentstackHomePage {
+        hero_section {
+          style
+          h1
+          h2
+          body
+          background_color
+          background_image {
+            url
+          }
+          button_text
+          button_link {
+            href
+          }
+          button_style
         }
-        button_text
-        button_link {
-          href
+        center_hero_section {
+          background_color
+          color
+          hero_style
+          h2
+          h3
+          body
+          button_text
+          button_link {
+            href
+          }
+          button_style
         }
-        button_style
-      }
-      center_hero_section{
-        background_color
-        color
-        hero_style
-        h2
-        h3
-        body
-        button_text
-        button_link {
-          href
-        }
-        button_style
       }
     }
-  }
   `)
   return (
     <Layout>
@@ -77,7 +77,9 @@ export default () => {
         backgroundImage={
           dataSet.contentstackHomePage.hero_section.background_image.url
         }
-        backgroundColor={dataSet.contentstackHomePage.hero_section.background_color}
+        backgroundColor={
+          dataSet.contentstackHomePage.hero_section.background_color
+        }
       >
         <HeroLeft
           h1={dataSet.contentstackHomePage.hero_section.h1}
@@ -93,11 +95,15 @@ export default () => {
         />
       </Stripe>
       <Stripe
-        backgroundColor={dataSet.contentstackHomePage.center_hero_section.background_color}
+        backgroundColor={
+          dataSet.contentstackHomePage.center_hero_section.background_color
+        }
         color={dataSet.contentstackHomePage.center_hero_section.color}
       >
         <SectionHeroCenter
-          styleName={dataSet.contentstackHomePage.center_hero_section.hero_style}
+          styleName={
+            dataSet.contentstackHomePage.center_hero_section.hero_style
+          }
           h3={dataSet.contentstackHomePage.center_hero_section.h3}
           body={dataSet.contentstackHomePage.center_hero_section.body}
         />

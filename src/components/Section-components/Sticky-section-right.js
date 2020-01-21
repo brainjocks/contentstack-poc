@@ -3,6 +3,9 @@ import SectionHero from '../Content-components/Heroes/SectionHero'
 import PageColumn2WideLeftFullWidth from '../Page-structures/score-column2-wide-l-full-width'
 
 const StickySectionRight = props => {
+  if (!props) {
+    return null
+  }
   return (
     <PageColumn2WideLeftFullWidth
       left={

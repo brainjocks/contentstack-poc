@@ -3,6 +3,9 @@ import PageColumn2Equal from '../Page-structures/score-column2-equal-page'
 import Hero from '../Content-components/Heroes/Hero'
 
 const HeroLeft = props => {
+  if (!props) {
+    return null
+  }
   return (
     <PageColumn2Equal
       left={
