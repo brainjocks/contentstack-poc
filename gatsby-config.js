@@ -18,10 +18,17 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://brainjocks-com.netlify.com/`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Brainjocks.com using Contentstack',
         short_name: 'BJ',
+        description: 'At Brainjocks, we create digital innovations that deliver engaging experiences through technology to enable and empower business.',
         start_url: '/',
         icon: 'src/img/apple-touch-icon.png',
       },

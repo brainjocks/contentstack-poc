@@ -63,7 +63,7 @@
             display: none;
         }
 
-        img[src*='/static'] {
+        img[src*='/'] {
             display: block;
             position: absolute;
             top: 0;
@@ -174,7 +174,7 @@
             display: none;
         }
 
-        img[src*='/static'] {
+        img[src*='/'] {
             display: block;
             width: 100%;
             max-width: 100%;
