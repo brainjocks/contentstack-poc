@@ -1,4 +1,9 @@
 .score-image {
+    display: none;
+}
+
+.score-image[src*='/'] {
+    display: block;
     @include vertical-space($vertical-spacing);
     @media screen and (min-width: $screen-sm-min) {
         @include vertical-space(60px);
@@ -8,6 +13,9 @@
     .content-energy-bar-trigger {
         .score-center-text {
             img {
+                display: none;
+            }
+            img[src*='/'] {
                 display: inline-block;
             }
         }

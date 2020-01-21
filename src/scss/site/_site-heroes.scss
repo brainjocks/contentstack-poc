@@ -6,7 +6,7 @@
             display: none;
         }
 
-        img[src*='/static'] {
+        img[src*='/'] {
             display: block;
             max-width: 100%;
             height: auto;
@@ -51,7 +51,7 @@
             display: none;
         }
 
-        img[src*='/static'] {
+        img[src*='/'] {
             display: block;
             max-width: 100%;
             height: auto;
@@ -90,7 +90,7 @@
             display: none;
         }
 
-        img[src*='/static'] {
+        img[src*='/'] {
             display: block;
             max-width: 100%;
             height: auto;

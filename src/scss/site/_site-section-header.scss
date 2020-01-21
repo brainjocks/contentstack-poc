@@ -3,6 +3,10 @@
 
     .score-header-image {
         img {
+            display: none;
+        }
+        img[src*='/'] {
+            display: block;
         }
     }
 
