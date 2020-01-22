@@ -16,13 +16,31 @@
             justify-content: flex-start;
         }
 
+        .score-center-text {
+            margin: 30px auto 30px;
+        }
+
+        .left-energy-bar.active {
+            display: flex;
+            flex: 1 1 auto;
+            flex-direction: column;
+            justify-content: center;
+            margin: 16px;
+            @media (min-width: $screen-md-min) {
+                flex: 0 1 calc(50% - 32px);
+            }
+        }
+
         .white {
             display: flex;
-            flex: 0 1 calc(50% - 32px);
+            flex: 1 1 auto;
             flex-direction: column;
             justify-content: center;
             margin: 16px;
             box-shadow: 4px 0 15px 0 rgba(0, 0, 0, 0.2);
+            @media (min-width: $screen-md-min) {
+                flex: 0 1 calc(50% - 32px);
+            }
         }
     }
 
