@@ -180,7 +180,11 @@ export default () => {
           })}
         />
       </Stripe>
-      <Stripe backgroundColor={sectionColor} color={stripeColor}>
+      <Stripe
+        backgroundColor={sectionColor}
+        color={stripeColor}
+        styleName={`flex-two`}
+      >
         <PageColumn1>
           <CenterText>
             <SectionHero
@@ -188,9 +192,8 @@ export default () => {
               body={`Brainjocks innovation comes through an array of solution services.`}
             />
           </CenterText>
-          <InnerColumn2Equal
-            styleName={`wide-gutters`}
-            left={[
+          <InnerColumn1
+            children={[
               <Highlight
                 styleName={`left-energy-bar active`}
                 heading={`MarTech Consulting`}
@@ -203,8 +206,6 @@ export default () => {
                 key={`7418ee2a-7b7f-40fd-a698-f74d3762e6d0`}
                 body={`Working together to understand your business, stated goals, company roadmap and operational model to select right-fit solutions.`}
               />,
-            ]}
-            right={[
               <Highlight
                 styleName={`left-energy-bar active`}
                 heading={`Software development`}
@@ -217,17 +218,15 @@ export default () => {
                 key={`b152c7f8-5d2b-40ed-8876-253608d1c5f9`}
                 body={`Working together to understand your business, stated goals, company roadmap and operational model to select right-fit solutions.`}
               />,
+              <CenterText key={`b152c7f8-5dee-40ed-8876-253608d1c5f9`}>
+                <Btn
+                  text={`View all Services`}
+                  src={`#`}
+                  styleName={`over-dark`}
+                />
+              </CenterText>,
             ]}
           />
-          <InnerColumn1>
-            <CenterText>
-              <Btn
-                text={`View all Services`}
-                src={`#`}
-                styleName={`over-dark`}
-              />
-            </CenterText>
-          </InnerColumn1>
         </PageColumn1>
       </Stripe>
       <Stripe>
