@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 const YoutubeVideo = props => {
-  if (!props) {
+  if (!props.videoId) {
     return null
   }
   return (

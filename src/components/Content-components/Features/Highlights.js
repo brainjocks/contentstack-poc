@@ -3,6 +3,9 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 const Highlight = props => {
+  if (!props) {
+    return null
+  }
   return (
     <div className={classnames('score-highlight', props.styleName)}>
       <img src={props.src} alt={props.alt} />

@@ -28,7 +28,8 @@ module.exports = {
       options: {
         name: 'Brainjocks.com using Contentstack',
         short_name: 'BJ',
-        description: 'At Brainjocks, we create digital innovations that deliver engaging experiences through technology to enable and empower business.',
+        description:
+          'At Brainjocks, we create digital innovations that deliver engaging experiences through technology to enable and empower business.',
         start_url: '/',
         icon: 'src/img/apple-touch-icon.png',
       },

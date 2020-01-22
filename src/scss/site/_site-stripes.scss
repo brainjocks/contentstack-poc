@@ -9,6 +9,23 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    &.flex-two {
+        .score-center {
+            display: flex;
+            flex-flow: wrap row;
+            justify-content: flex-start;
+        }
+
+        .white {
+            display: flex;
+            flex: 0 1 calc(50% - 32px);
+            flex-direction: column;
+            justify-content: center;
+            margin: 16px;
+            box-shadow: 4px 0 15px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+
     &.small-spacing-bottom {
         padding-bottom: 160px;
         @media screen and (min-width: $screen-sm-min) {
@@ -151,6 +168,7 @@
                     }
                 }
             }
+
             // reorder boxed on mobile sizes
             // when ther are more boxes - up to 6
             .mobile-switch {
@@ -215,7 +233,7 @@
 }
 
 .score-pic-stripe.picture-field-720-left,
-.score-stripe.picture-field-720-left{
+.score-stripe.picture-field-720-left {
     min-height: 622px;
     padding: 30px 5px 30px 5px;
     background-position: left bottom;
@@ -231,7 +249,7 @@
     .score-pic-stripe.picture-field-720-left,
     .score-pic-stripe.picture-field-720-right,
     .score-stripe.picture-field-720-left,
-    .score-stripe.picture-field-720-right{
+    .score-stripe.picture-field-720-right {
         div[class^="score-column"] {
             .score-column2.equal {
                 & > .score-left,

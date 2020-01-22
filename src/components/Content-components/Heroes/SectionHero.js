@@ -3,6 +3,9 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 const SectionHero = props => {
+  if (!props) {
+    return null
+  }
   return (
     <div className={classnames('score-section-hero', props.styleName)}>
       <div className="score-hero-image">
