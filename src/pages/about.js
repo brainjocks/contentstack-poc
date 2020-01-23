@@ -51,17 +51,10 @@ export default () => {
           video_stripe_color
           video_section_text
           highlights {
-<<<<<<< HEAD
             image {
               url
               description
             }
-=======
-              image {
-                  url
-                  description
-              }
->>>>>>> mikeb
             highlight_heading
             highlight_body
             youtube {
@@ -124,13 +117,8 @@ export default () => {
               return (
                 <StyleBox styleName={`white`} key={index}>
                   <Highlight
-<<<<<<< HEAD
                     src={!item.image ? '' : item.image.url}
                     alt={!item.image ? '' : item.image.description}
-=======
-                    src={!item.image ? "" : item.image.url}
-                    alt={!item.image ? "" : item.image.description}
->>>>>>> mikeb
                     heading={item.highlight_heading}
                     body={item.highlight_body}
                   />
