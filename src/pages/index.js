@@ -1,6 +1,5 @@
 import React from 'react'
 import Stripe from '../components/Stripe'
-import heroImage from '../img/turtle-on-back-900.png'
 import heroImageSectionTwo from '../img/dogs-on-motocycle-900.png'
 import pressbox from '../img/pressbox-tile-image.jpg'
 import brainjuice from '../img/brainjuice-tile-image.jpg'
@@ -66,6 +65,14 @@ export default () => {
           }
           button_style
         }
+        stripe_sticky_section_right {
+          stripe_background_color
+          hero_h3
+          hero_body
+          hero_image {
+            url
+          }
+        }
       }
     }
   `)
@@ -108,15 +115,11 @@ export default () => {
           body={dataSet.contentstackHomePage.center_hero_section.body}
         />
       </Stripe>
-      <Stripe styleName={`sticky-parent`} backgroundColor={section2Color}>
+      <Stripe styleName={`sticky-parent`} backgroundColor={dataSet.contentstackHomePage.stripe_sticky_section_right.stripe_background_color}>
         <StickySectionRight
-          h3={`Section Hero`}
-          body={`What makes Brainjocks unique? We don't just build great
-              experiences, we partner with our clients and enable them to make the most of their
-              platform and digital assets. Our approach provides the architecture and the
-              operational transformation needed for your team to be efficient, empowered and most
-              importantly, effective.`}
-          src={heroImage}
+          h3={dataSet.contentstackHomePage.stripe_sticky_section_right.hero_h3}
+          body={dataSet.contentstackHomePage.stripe_sticky_section_right.hero_body}
+          src={dataSet.contentstackHomePage.stripe_sticky_section_right.hero_image.url}
           cards={data.cards.map((item, index) => {
             return (
               <StyleBox
