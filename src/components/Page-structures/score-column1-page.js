@@ -1,6 +1,9 @@
 import React from 'react'
 
 const PageColumn1 = props => {
+  if (!props) {
+    return null
+  }
   return (
     <div className="container">
       <div className="score-column1">

@@ -37,9 +37,13 @@
             flex-direction: column;
             justify-content: center;
             margin: 16px;
-            box-shadow: 4px 0 15px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 4px 0 15px 0 rgba(0, 0, 0, 0.15);
             @media (min-width: $screen-md-min) {
                 flex: 0 1 calc(50% - 32px);
+            }
+
+            .score-highlight img {
+                margin: 0 auto 30px auto;
             }
         }
     }

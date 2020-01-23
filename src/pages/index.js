@@ -13,7 +13,6 @@ import StyleBox from '../components/Content-components/Panels/Score-style-box'
 import Highlight from '../components/Content-components/Features/Highlights'
 import PageColumn1 from '../components/Page-structures/score-column1-page'
 import CenterText from '../components/Content-components/Panels/Score-center-text'
-import InnerColumn2Equal from '../components/Inner-structures/score-column2-equal-inner'
 import InnerColumn1 from '../components/Inner-structures/score-column1-inner'
 import Btn from '../components/Content-components/Buttons/Score-button'
 import InnerColumn3Wide from '../components/Inner-structures/score-column3-wide-inner'
@@ -115,11 +114,22 @@ export default () => {
           body={dataSet.contentstackHomePage.center_hero_section.body}
         />
       </Stripe>
-      <Stripe styleName={`sticky-parent`} backgroundColor={dataSet.contentstackHomePage.stripe_sticky_section_right.stripe_background_color}>
+      <Stripe
+        styleName={`sticky-parent`}
+        backgroundColor={
+          dataSet.contentstackHomePage.stripe_sticky_section_right
+            .stripe_background_color
+        }
+      >
         <StickySectionRight
           h3={dataSet.contentstackHomePage.stripe_sticky_section_right.hero_h3}
-          body={dataSet.contentstackHomePage.stripe_sticky_section_right.hero_body}
-          src={dataSet.contentstackHomePage.stripe_sticky_section_right.hero_image.url}
+          body={
+            dataSet.contentstackHomePage.stripe_sticky_section_right.hero_body
+          }
+          src={
+            dataSet.contentstackHomePage.stripe_sticky_section_right.hero_image
+              .url
+          }
           cards={data.cards.map((item, index) => {
             return (
               <StyleBox
