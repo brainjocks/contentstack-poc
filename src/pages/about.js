@@ -51,10 +51,10 @@ export default () => {
           video_stripe_color
           video_section_text
           highlights {
-            highlight_image {
-              url
-              description
-            }
+              image {
+                  url
+                  description
+              }
             highlight_heading
             highlight_body
             youtube {
@@ -86,7 +86,7 @@ export default () => {
             body={hero.hero_left.hero_body_text}
             children={
               <Btn
-                text={hero.hero_left.btn_text}
+                text={hero.hero_left.button_text}
                 href={hero.hero_left.button_link.href}
                 styleName={hero.hero_left.button_style}
               />
@@ -99,7 +99,7 @@ export default () => {
             body={hero.hero_right.hero_body_text}
             children={
               <Btn
-                text={hero.hero_right.btn_text}
+                text={hero.hero_right.button_text}
                 href={hero.hero_right.button_link.href}
                 styleName={hero.hero_right.button_style}
               />
@@ -117,8 +117,8 @@ export default () => {
               return (
                 <StyleBox styleName={`white`} key={index}>
                   <Highlight
-                    src={`item.highlight_image.url`}
-                    alt={`item.highlight_image.description`}
+                    src={!item.image ? "" : item.image.url}
+                    alt={!item.image ? "" : item.image.description}
                     heading={item.highlight_heading}
                     body={item.highlight_body}
                   />

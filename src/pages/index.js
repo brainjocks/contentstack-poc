@@ -122,11 +122,22 @@ export default () => {
           body={dataSet.contentstackHomePage.center_hero_section.body}
         />
       </Stripe>
-      <Stripe styleName={`sticky-parent`} backgroundColor={dataSet.contentstackHomePage.stripe_sticky_section_right.stripe_background_color}>
+      <Stripe
+        styleName={`sticky-parent`}
+        backgroundColor={
+          dataSet.contentstackHomePage.stripe_sticky_section_right
+            .stripe_background_color
+        }
+      >
         <StickySectionRight
           h3={dataSet.contentstackHomePage.stripe_sticky_section_right.hero_h3}
-          body={dataSet.contentstackHomePage.stripe_sticky_section_right.hero_body}
-          src={dataSet.contentstackHomePage.stripe_sticky_section_right.hero_image.url}
+          body={
+            dataSet.contentstackHomePage.stripe_sticky_section_right.hero_body
+          }
+          src={
+            dataSet.contentstackHomePage.stripe_sticky_section_right.hero_image
+              .url
+          }
           cards={data.cards.map((item, index) => {
             return (
               <StyleBox
