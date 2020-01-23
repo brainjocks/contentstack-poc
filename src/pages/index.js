@@ -13,7 +13,6 @@ import StyleBox from '../components/Content-components/Panels/Score-style-box'
 import Highlight from '../components/Content-components/Features/Highlights'
 import PageColumn1 from '../components/Page-structures/score-column1-page'
 import CenterText from '../components/Content-components/Panels/Score-center-text'
-import InnerColumn2Equal from '../components/Inner-structures/score-column2-equal-inner'
 import InnerColumn1 from '../components/Inner-structures/score-column1-inner'
 import Btn from '../components/Content-components/Buttons/Score-button'
 import InnerColumn3Wide from '../components/Inner-structures/score-column3-wide-inner'
@@ -29,52 +28,60 @@ import { graphql, useStaticQuery } from 'gatsby'
 import data from '../data/data.json'
 
 let heroStripeColor = '#FFFFFF'
-let stripeColor = '#FFFFFF'
-let sectionColor = '#0C2F41'
 let section2Color = '#EEEEEE'
 
 export default () => {
   const dataSet = useStaticQuery(graphql`
-    query {
-      contentstackHomePage {
-        hero_section {
-          style
-          h1
-          h2
-          body
-          background_color
-          background_image {
-            url
-          }
-          button_text
-          button_link {
-            href
-          }
-          button_style
+  query {
+    contentstackHomePage {
+      hero_section {
+        style
+        h1
+        h2
+        body
+        background_color
+        background_image {
+          url
         }
-        center_hero_section {
-          background_color
-          color
-          hero_style
-          h2
-          h3
-          body
-          button_text
-          button_link {
-            href
-          }
-          button_style
+        button_text
+        button_link {
+          href
         }
-        stripe_sticky_section_right {
-          stripe_background_color
-          hero_h3
-          hero_body
-          hero_image {
-            url
-          }
+        button_style
+      }
+      center_hero_section {
+        background_color
+        color
+        hero_style
+        h2
+        h3
+        body
+        button_text
+        button_link {
+          href
+        }
+        button_style
+      }
+      stripe_sticky_section_right {
+        stripe_background_color
+        hero_h3
+        hero_body
+        hero_image {
+          url
+        }
+      }
+      services_stripe {
+        background_color
+        color
+        hero_h2
+        hero_body
+        services_highlights {
+          heading
+          body
         }
       }
     }
+  }
   `)
   return (
     <Layout>
@@ -184,51 +191,29 @@ export default () => {
         />
       </Stripe>
       <Stripe
-        backgroundColor={sectionColor}
-        color={stripeColor}
+        backgroundColor={dataSet.contentstackHomePage.services_stripe.background_color}
+        color={dataSet.contentstackHomePage.services_stripe.color}
         styleName={`flex-two`}
       >
         <PageColumn1>
           <CenterText>
             <SectionHero
-              h2={`Services`}
-              body={`Brainjocks innovation comes through an array of solution services.`}
+              h2={dataSet.contentstackHomePage.services_stripe.hero_h2}
+              body={dataSet.contentstackHomePage.services_stripe.hero_body}
             />
           </CenterText>
           <InnerColumn1
-            children={[
+            children={dataSet.contentstackHomePage.services_stripe.services_highlights.map((item, index) => {
+            return (
               <Highlight
                 styleName={`left-energy-bar active`}
-                heading={`MarTech Consulting`}
-                key={`0747a1cd-8f5e-437e-9e92-27c8d99a6c01`}
-                body={`Working together to understand your business, stated goals, company roadmap and operational model to select right-fit solutions.`}
-              />,
-              <Highlight
-                styleName={`left-energy-bar active`}
-                heading={`Software development`}
-                key={`7418ee2a-7b7f-40fd-a698-f74d3762e6d0`}
-                body={`Working together to understand your business, stated goals, company roadmap and operational model to select right-fit solutions.`}
-              />,
-              <Highlight
-                styleName={`left-energy-bar active`}
-                heading={`Software development`}
-                key={`24e119b8-322a-4fb7-9ac5-3501c7084f2a`}
-                body={`Working together to understand your business, stated goals, company roadmap and operational model to select right-fit solutions.`}
-              />,
-              <Highlight
-                styleName={`left-energy-bar active`}
-                heading={`Software development`}
-                key={`b152c7f8-5d2b-40ed-8876-253608d1c5f9`}
-                body={`Working together to understand your business, stated goals, company roadmap and operational model to select right-fit solutions.`}
-              />,
-              <CenterText key={`b152c7f8-5dee-40ed-8876-253608d1c5f9`}>
-                <Btn
-                  text={`View all Services`}
-                  src={`#`}
-                  styleName={`over-dark`}
-                />
-              </CenterText>,
-            ]}
+                heading={item.heading}
+                key={'' +index}
+                body={item.body}
+              />
+            )
+          })
+        }
           />
         </PageColumn1>
       </Stripe>
