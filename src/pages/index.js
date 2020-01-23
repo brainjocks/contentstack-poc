@@ -32,56 +32,56 @@ let section2Color = '#EEEEEE'
 
 export default () => {
   const dataSet = useStaticQuery(graphql`
-  query {
-    contentstackHomePage {
-      hero_section {
-        style
-        h1
-        h2
-        body
-        background_color
-        background_image {
-          url
-        }
-        button_text
-        button_link {
-          href
-        }
-        button_style
-      }
-      center_hero_section {
-        background_color
-        color
-        hero_style
-        h2
-        h3
-        body
-        button_text
-        button_link {
-          href
-        }
-        button_style
-      }
-      stripe_sticky_section_right {
-        stripe_background_color
-        hero_h3
-        hero_body
-        hero_image {
-          url
-        }
-      }
-      services_stripe {
-        background_color
-        color
-        hero_h2
-        hero_body
-        services_highlights {
-          heading
+    query {
+      contentstackHomePage {
+        hero_section {
+          style
+          h1
+          h2
           body
+          background_color
+          background_image {
+            url
+          }
+          button_text
+          button_link {
+            href
+          }
+          button_style
+        }
+        center_hero_section {
+          background_color
+          color
+          hero_style
+          h2
+          h3
+          body
+          button_text
+          button_link {
+            href
+          }
+          button_style
+        }
+        stripe_sticky_section_right {
+          stripe_background_color
+          hero_h3
+          hero_body
+          hero_image {
+            url
+          }
+        }
+        services_stripe {
+          background_color
+          color
+          hero_h2
+          hero_body
+          services_highlights {
+            heading
+            body
+          }
         }
       }
     }
-  }
   `)
   return (
     <Layout>
@@ -122,11 +122,22 @@ export default () => {
           body={dataSet.contentstackHomePage.center_hero_section.body}
         />
       </Stripe>
-      <Stripe styleName={`sticky-parent`} backgroundColor={dataSet.contentstackHomePage.stripe_sticky_section_right.stripe_background_color}>
+      <Stripe
+        styleName={`sticky-parent`}
+        backgroundColor={
+          dataSet.contentstackHomePage.stripe_sticky_section_right
+            .stripe_background_color
+        }
+      >
         <StickySectionRight
           h3={dataSet.contentstackHomePage.stripe_sticky_section_right.hero_h3}
-          body={dataSet.contentstackHomePage.stripe_sticky_section_right.hero_body}
-          src={dataSet.contentstackHomePage.stripe_sticky_section_right.hero_image.url}
+          body={
+            dataSet.contentstackHomePage.stripe_sticky_section_right.hero_body
+          }
+          src={
+            dataSet.contentstackHomePage.stripe_sticky_section_right.hero_image
+              .url
+          }
           cards={data.cards.map((item, index) => {
             return (
               <StyleBox
@@ -191,7 +202,9 @@ export default () => {
         />
       </Stripe>
       <Stripe
-        backgroundColor={dataSet.contentstackHomePage.services_stripe.background_color}
+        backgroundColor={
+          dataSet.contentstackHomePage.services_stripe.background_color
+        }
         color={dataSet.contentstackHomePage.services_stripe.color}
         styleName={`flex-two`}
       >
@@ -203,17 +216,18 @@ export default () => {
             />
           </CenterText>
           <InnerColumn1
-            children={dataSet.contentstackHomePage.services_stripe.services_highlights.map((item, index) => {
-            return (
-              <Highlight
-                styleName={`left-energy-bar active`}
-                heading={item.heading}
-                key={'' +index}
-                body={item.body}
-              />
-            )
-          })
-        }
+            children={dataSet.contentstackHomePage.services_stripe.services_highlights.map(
+              (item, index) => {
+                return (
+                  <Highlight
+                    styleName={`left-energy-bar active`}
+                    heading={item.heading}
+                    key={'' + index}
+                    body={item.body}
+                  />
+                )
+              }
+            )}
           />
         </PageColumn1>
       </Stripe>

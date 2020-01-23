@@ -51,10 +51,17 @@ export default () => {
           video_stripe_color
           video_section_text
           highlights {
-            highlight_image {
+<<<<<<< HEAD
+            image {
               url
               description
             }
+=======
+              image {
+                  url
+                  description
+              }
+>>>>>>> mikeb
             highlight_heading
             highlight_body
             youtube {
@@ -80,26 +87,26 @@ export default () => {
         color={`white`}
         children={[
           <HeroLeft
-            key={1}
+            key={hero + `1`}
             h1={hero.hero_left.h1_text}
             h2={hero.hero_left.h2_text}
             body={hero.hero_left.hero_body_text}
             children={
               <Btn
-                text={hero.hero_left.btn_text}
+                text={hero.hero_left.button_text}
                 href={hero.hero_left.button_link.href}
                 styleName={hero.hero_left.button_style}
               />
             }
           />,
           <HeroRight
-            key={2}
+            key={hero + `2`}
             h1={hero.hero_right.h1_text}
             h2={hero.hero_right.h2_text}
             body={hero.hero_right.hero_body_text}
             children={
               <Btn
-                text={hero.hero_right.btn_text}
+                text={hero.hero_right.button_text}
                 href={hero.hero_right.button_link.href}
                 styleName={hero.hero_right.button_style}
               />
@@ -117,8 +124,13 @@ export default () => {
               return (
                 <StyleBox styleName={`white`} key={index}>
                   <Highlight
-                    src={`item.highlight_image.url`}
-                    alt={`item.highlight_image.description`}
+<<<<<<< HEAD
+                    src={!item.image ? '' : item.image.url}
+                    alt={!item.image ? '' : item.image.description}
+=======
+                    src={!item.image ? "" : item.image.url}
+                    alt={!item.image ? "" : item.image.description}
+>>>>>>> mikeb
                     heading={item.highlight_heading}
                     body={item.highlight_body}
                   />
