@@ -1,4 +1,6 @@
 import React from 'react'
+import renderHTML from 'react-render-html'
+
 import StyleBox from '../panels/score-style-box'
 import Highlight from './highlights'
 import Btn from '../buttons/score-button'
@@ -10,6 +12,8 @@ const Card = props => {
     ? props.item.title_body
     : props.item.full_highlight
     ? props.item.full_highlight
+    : props.item.background_body
+    ? props.item.background_body
     : null
 
   if (!props || !item) {
@@ -17,12 +21,15 @@ const Card = props => {
   }
 
   return (
-    <StyleBox styleName={`white cover`}>
+    <StyleBox
+      styleName={`white cover`}
+      backgroundImage={item.background && item.background.url}
+    >
       <Highlight
         src={item.image && item.image.url}
         alt={item.image && item.image.description}
         heading={item.title}
-        body={item.body}
+        body={renderHTML(item.body)}
       >
         <BtnGroup>
           <Btn

@@ -94,6 +94,12 @@ export default () => {
               title
             }
           }
+          background_body {
+            background {
+              url
+            }
+            body
+          }
         }
         services_stripe {
           background_color
