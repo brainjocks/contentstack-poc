@@ -1,6 +1,6 @@
 import React from 'react'
-import SectionHero from '../Content-components/Heroes/SectionHero'
-import PageColumn3Wide from '../Page-structures/score-column3-wide'
+import SectionHero from '../content-components/heroes/sectionHero'
+import PageColumn3Wide from '../page-structures/score-column3-wide'
 
 const SectionHeroCenter = props => {
   if (!props) {
