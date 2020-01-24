@@ -1,8 +1,8 @@
 import React from 'react'
-import StyleBox from '../../Content-components/Panels/Score-style-box'
-import Highlight from '../../Content-components/Features/Highlights'
-import Btn from '../../Content-components/Buttons/Score-button'
-import BtnGroup from '../../Content-components/Buttons/Score-button-group'
+import StyleBox from '../panels/score-style-box'
+import Highlight from './highlights'
+import Btn from '../buttons/score-button'
+import BtnGroup from '../buttons/score-button-group'
 import PropTypes from 'prop-types'
 
 const Card = props => {
