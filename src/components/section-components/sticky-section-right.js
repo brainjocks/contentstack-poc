@@ -1,6 +1,6 @@
 import React from 'react'
-import SectionHero from '../Content-components/Heroes/SectionHero'
-import PageColumn2WideLeftFullWidth from '../Page-structures/score-column2-wide-l-full-width'
+import SectionHero from '../content-components/heroes/sectionHero'
+import PageColumn2WideLeftFullWidth from '../page-structures/score-column2-wide-l-full-width'
 
 const StickySectionRight = props => {
   if (!props) {
