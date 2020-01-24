@@ -7,10 +7,11 @@ import Stripe from '../components/stripe'
 import Btn from '../components/content-components/buttons/score-button'
 import PageColumn3Wide from '../components/page-structures/score-column3-wide'
 import { graphql, useStaticQuery } from 'gatsby'
+import renderHTML from 'react-render-html'
 
 export default () => {
-  const heroSection = useStaticQuery(graphql`
-    query ContactHeroQuery {
+  const page = useStaticQuery(graphql`
+    query ContactQuery {
       contentstackContactUsPage {
         hero {
           background_style_name
@@ -29,12 +30,23 @@ export default () => {
           }
           button_style_name
         }
+        form {
+          form_heading
+          form_subheading
+          second_form_subheading
+          input_fields {
+            input_type
+            input_label_text
+            input_placeholder_text
+          }
+          privacy_policy
+        }
       }
     }
   `)
 
-  const heroData = heroSection.contentstackContactUsPage.hero
-
+  const heroData = page.contentstackContactUsPage.hero
+  const formData = page.contentstackContactUsPage.form
   return (
     <Layout>
       <Head title="Contact Us" />
@@ -42,20 +54,21 @@ export default () => {
         backgroundImage={heroData.background_image.url}
         color={heroData.text_color}
         styleName={heroData.background_style_name}
-      >
-        <HeroLeft
-          h1={heroData.h1_text}
-          h2={heroData.h2_text}
-          body={heroData.hero_body_text}
-          children={
-            <Btn
-              text={heroData.button_link.title}
-              href={heroData.button_link.href}
-              styleName={heroData.button_style_name}
-            />
-          }
-        />
-      </Stripe>
+        children={
+          <HeroLeft
+            h1={heroData.h1_text}
+            h2={heroData.h2_text}
+            body={heroData.hero_body_text}
+            children={
+              <Btn
+                text={heroData.button_link.title}
+                href={heroData.button_link.href}
+                styleName={heroData.button_style_name}
+              />
+            }
+          />
+        }
+      />
       <PageColumn3Wide
         center={
           <form
@@ -67,45 +80,40 @@ export default () => {
           >
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
-            <h2>Let's innovate together</h2>
-            <h3>770.924.6444</h3>
-            <h3>
-              Give us a call or complete the following and we will be in touch
-              very soon.
-            </h3>
-            <div className="form-group">
-              <input type="text" placeholder="First Name*" maxLength="40" />
-            </div>
-            <div className="form-group">
-              <input type="text" placeholder="Last Name*" maxLength="40" />
-            </div>
-            <div className="form-group">
-              <input type="text" placeholder="Phone*" maxLength="140" />
-            </div>
-            <div className="form-group">
-              <input type="email" placeholder="Email*" maxLength="140" />
-            </div>
-            <div className="form-group">
-              <input type="text" placeholder="Company Name*" maxLength="140" />
-            </div>
-            <div className="form-group">
-              <textarea
-                type="text"
-                rows="4"
-                placeholder="What would you like to be contacted about?"
-                spellCheck="false"
-                maxLength="240"
-              />
-            </div>
+            <h2>{formData.form_heading}</h2>
+            <h3>{formData.form_subheading}</h3>
+            <h3>{formData.second_form_subheading}</h3>
+            {formData.input_fields.map((item, index) => {
+              if (item.input_type === 'Text Area') {
+                return (
+                  <div className="form-group" key={index}>
+                    <textarea
+                      type="text"
+                      rows="4"
+                      placeholder={item.input_placeholder_text}
+                      spellCheck="false"
+                      maxLength="240"
+                    />
+                  </div>
+                )
+              }
+              return (
+                <div className="form-group" key={index}>
+                  <input
+                    is
+                    required
+                    type={item.input_type}
+                    placeholder={item.input_placeholder_text}
+                    maxLength="100"
+                  />
+                </div>
+              )
+            })}
             <div className="form-group privacy">
               <label>
                 <input type="checkbox" value="true" is required />
               </label>
-              Yes, I understand and accept Brainjocks{' '}
-              <a href="/" target="_new">
-                Privacy Policy{' '}
-              </a>
-              and consent to sharing my information.
+              {renderHTML(formData.privacy_policy)}
             </div>
             <input value="send" type="submit" />
           </form>
