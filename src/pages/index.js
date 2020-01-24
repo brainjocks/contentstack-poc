@@ -11,6 +11,7 @@ import PageColumn3Wide from '../components/Page-structures/score-column3-wide'
 import SectionHero from '../components/Content-components/Heroes/SectionHero'
 import StyleBox from '../components/Content-components/Panels/Score-style-box'
 import Highlight from '../components/Content-components/Features/Highlights'
+import Card from '../components/Content-components/Features/Card'
 import PageColumn1 from '../components/Page-structures/score-column1-page'
 import CenterText from '../components/Content-components/Panels/Score-center-text'
 import InnerColumn1 from '../components/Inner-structures/score-column1-inner'
@@ -68,6 +69,30 @@ export default () => {
           hero_body
           hero_image {
             url
+          }
+        }
+        stripe_sticky_section_right_highlights {
+          title_body {
+            title
+            body
+          }
+          full_highlight {
+            image {
+              url
+              description
+            }
+            title
+            body
+            button_1_text
+            button_1_link {
+              href
+              title
+            }
+            button_2_text
+            button_2_link {
+              href
+              title
+            }
           }
         }
         services_stripe {
@@ -144,29 +169,7 @@ export default () => {
               .url
           }
           cards={data.cards.map((item, index) => {
-            return (
-              <StyleBox
-                styleName={`white cover`}
-                backgroundImage={item.background}
-                key={index}
-              >
-                <Highlight
-                  src={item.img}
-                  alt={item.imgAlt}
-                  heading={item.title}
-                  body={item.body}
-                >
-                  <BtnGroup>
-                    <Btn href={item.buttonLink} text={item.buttonText} />
-                    <Btn
-                      styleName={`hollow`}
-                      href={item.buttonLink2}
-                      text={item.buttonText2}
-                    />
-                  </BtnGroup>
-                </Highlight>
-              </StyleBox>
-            )
+            return <Card item={item} key={index} />
           })}
         />
       </Stripe>
