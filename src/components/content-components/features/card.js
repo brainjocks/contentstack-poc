@@ -31,17 +31,22 @@ const Card = props => {
         heading={item.title}
         body={renderHTML(item.body)}
       >
-        <BtnGroup>
-          <Btn
-            href={item.button_1_link && item.button_1_link.href}
-            text={item.button_1_text}
-          />
-          <Btn
-            styleName={`hollow`}
-            href={item.button_2_link && item.button_2_link.href}
-            text={item.button_2_text}
-          />
-        </BtnGroup>
+        <BtnGroup
+          children={
+            item.call_to_action &&
+            item.call_to_action.button &&
+            item.call_to_action.button.map((innerItem, index) => {
+              return (
+                <Btn
+                  key={index}
+                  styleName={innerItem.style}
+                  href={innerItem.link && innerItem.link.href}
+                  text={innerItem.text}
+                />
+              )
+            })
+          }
+        />
       </Highlight>
     </StyleBox>
   )

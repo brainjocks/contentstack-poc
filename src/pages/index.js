@@ -83,15 +83,26 @@ export default () => {
             }
             title
             body
-            button_1_text
-            button_1_link {
-              href
-              title
-            }
-            button_2_text
-            button_2_link {
-              href
-              title
+            call_to_action {
+              button {
+                style
+                text
+                link {
+                  href
+                  title
+                }
+              }
+              image_button {
+                style
+                image {
+                  url
+                  description
+                }
+                link {
+                  href
+                  title
+                }
+              }
             }
           }
           background_body {
