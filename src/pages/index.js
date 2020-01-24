@@ -168,9 +168,11 @@ export default () => {
             dataSet.contentstackHomePage.stripe_sticky_section_right.hero_image
               .url
           }
-          cards={data.cards.map((item, index) => {
-            return <Card item={item} key={index} />
-          })}
+          cards={dataSet.contentstackHomePage.stripe_sticky_section_right_highlights.map(
+            (item, index) => {
+              return <Card item={item} key={index} />
+            }
+          )}
         />
       </Stripe>
       <Stripe styleName={`sticky-parent`} backgroundColor={section2Color}>

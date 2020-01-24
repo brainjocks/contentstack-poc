@@ -6,27 +6,33 @@ import BtnGroup from '../../Content-components/Buttons/Score-button-group'
 import PropTypes from 'prop-types'
 
 const Card = props => {
-  if (!props) {
+  const item = props.item.title_body
+    ? props.item.title_body
+    : props.item.full_highlight
+    ? props.item.full_highlight
+    : null
+
+  if (!props || !item) {
     return null
   }
 
   return (
     <StyleBox styleName={`white cover`}>
       <Highlight
-        src={props.item.image && props.item.image.url}
-        alt={props.item.image && props.item.image.description}
-        heading={props.item.title}
-        body={props.item.body}
+        src={item.image && item.image.url}
+        alt={item.image && item.image.description}
+        heading={item.title}
+        body={item.body}
       >
         <BtnGroup>
           <Btn
-            href={props.item.button_1_link && props.item.button_1_link.href}
-            text={props.item.button_1_text}
+            href={item.button_1_link && item.button_1_link.href}
+            text={item.button_1_text}
           />
           <Btn
             styleName={`hollow`}
-            href={props.item.button_2_link && props.item.button_2_link.href}
-            text={props.item.button_2_text}
+            href={item.button_2_link && item.button_2_link.href}
+            text={item.button_2_text}
           />
         </BtnGroup>
       </Highlight>
