@@ -80,7 +80,7 @@ export default () => {
             body
           }
           button_text
-          button_link{
+          button_link {
             href
           }
           button_style
@@ -221,26 +221,34 @@ export default () => {
             />
           </CenterText>
           <InnerColumn1
-            children={[dataSet.contentstackHomePage.services_stripe.services_highlights.map(
-              (item, index) => {
-                return (
-                  <Highlight
-                    styleName={`left-energy-bar active`}
-                    heading={item.heading}
-                    key={index}
-                    body={item.body}
-                  />
-                )
-              }
-            ),
-            <CenterText key={`b152c7f8-5dee-40ed-8876-253608d1c5f9`}>
-            <Btn
-              text={dataSet.contentstackHomePage.services_stripe.button_text}
-              href={dataSet.contentstackHomePage.services_stripe.button_link.href}
-              styleName={dataSet.contentstackHomePage.services_stripe.button_style}
-            />
-          </CenterText>,
-          ]}
+            children={[
+              dataSet.contentstackHomePage.services_stripe.services_highlights.map(
+                (item, index) => {
+                  return (
+                    <Highlight
+                      styleName={`left-energy-bar active`}
+                      heading={item.heading}
+                      key={index}
+                      body={item.body}
+                    />
+                  )
+                }
+              ),
+              <CenterText key={`b152c7f8-5dee-40ed-8876-253608d1c5f9`}>
+                <Btn
+                  text={
+                    dataSet.contentstackHomePage.services_stripe.button_text
+                  }
+                  href={
+                    dataSet.contentstackHomePage.services_stripe.button_link
+                      .href
+                  }
+                  styleName={
+                    dataSet.contentstackHomePage.services_stripe.button_style
+                  }
+                />
+              </CenterText>,
+            ]}
           />
         </PageColumn1>
       </Stripe>
