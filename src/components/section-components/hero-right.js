@@ -1,6 +1,6 @@
 import React from 'react'
-import PageColumn2Equal from '../Page-structures/score-column2-equal-page'
-import Hero from '../Content-components/Heroes/Hero'
+import PageColumn2Equal from '../page-structures/score-column2-equal-page'
+import Hero from '../content-components/heroes/hero'
 
 const HeroRight = props => {
   if (!props) {

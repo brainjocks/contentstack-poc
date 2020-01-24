@@ -1,8 +1,8 @@
 import React from 'react'
-import PageColumn2Equal from '../Page-structures/score-column2-equal-page'
-import SectionHero from '../Content-components/Heroes/SectionHero'
+import PageColumn2Equal from '../page-structures/score-column2-equal-page'
+import SectionHero from '../content-components/heroes/sectionHero'
 
-const SectionHeroLeft = props => {
+const SectionHeroRight = props => {
   if (!props) {
     return null
   }
@@ -21,4 +21,4 @@ const SectionHeroLeft = props => {
     />
   )
 }
-export default SectionHeroLeft
+export default SectionHeroRight

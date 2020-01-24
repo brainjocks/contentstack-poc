@@ -1,16 +1,16 @@
 import React from 'react'
 import '../scss/main.scss'
-import Layout from '../components/Layout'
-import Head from '../components/Head'
-import Stripe from '../components/Stripe'
-import HeroRight from '../components/Section-components/Hero-right'
-import HeroLeft from '../components/Section-components/Hero-left'
-import Btn from '../components/Content-components/Buttons/Score-button'
-import YoutubeVideo from '../components/Content-components/Score-youtube-video'
+import Layout from '../components/layout'
+import Head from '../components/head'
+import Stripe from '../components/stripe'
+import HeroRight from '../components/section-components/hero-right'
+import HeroLeft from '../components/section-components/hero-left'
+import Btn from '../components/content-components/buttons/score-button'
+import YoutubeVideo from '../components/content-components/score-youtube-video'
 import { graphql, useStaticQuery } from 'gatsby'
-import StyleBox from '../components/Content-components/Panels/Score-style-box'
-import Highlight from '../components/Content-components/Features/Highlights'
-import PageColumn1 from '../components/Page-structures/score-column1-page'
+import StyleBox from '../components/content-components/panels/score-style-box'
+import Highlight from '../components/content-components/features/highlights'
+import PageColumn1 from '../components/page-structures/score-column1-page'
 
 export default () => {
   const page = useStaticQuery(graphql`
@@ -80,7 +80,7 @@ export default () => {
         color={`white`}
         children={[
           <HeroLeft
-            key={hero + `1`}
+            key={1}
             h1={hero.hero_left.h1_text}
             h2={hero.hero_left.h2_text}
             body={hero.hero_left.hero_body_text}
@@ -93,7 +93,7 @@ export default () => {
             }
           />,
           <HeroRight
-            key={hero + `2`}
+            key={2}
             h1={hero.hero_right.h1_text}
             h2={hero.hero_right.h2_text}
             body={hero.hero_right.hero_body_text}

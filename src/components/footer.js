@@ -1,11 +1,11 @@
 import React from 'react'
-import PageColumn1 from './Page-structures/score-column1-page'
-import InnerColumn3Wide from './Inner-structures/score-column3-wide-inner'
-import ImageBtn from './Content-components/Buttons/Score-image-button'
-import CenterText from './Content-components/Panels/Score-center-text'
-import BtnGroup from './Content-components/Buttons/Score-button-group'
-import CompositeBtn from './Content-components/Buttons/Score-composite-link'
-import ContentSpot from './Content-components/Score-content-spot'
+import PageColumn1 from './page-structures/score-column1-page'
+import InnerColumn3Wide from './inner-structures/score-column3-wide-inner'
+import ImageBtn from './content-components/buttons/score-image-button'
+import CenterText from './content-components/panels/score-center-text'
+import BtnGroup from './content-components/buttons/score-button-group'
+import CompositeBtn from './content-components/buttons/score-composite-link'
+import ContentSpot from './content-components/score-content-spot'
 import renderHTML from 'react-render-html'
 import { graphql, useStaticQuery } from 'gatsby'
 
@@ -13,7 +13,7 @@ const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
       contentstackFooter {
-        logo_image {
+        brand_logo {
           url
           description
         }
@@ -46,8 +46,8 @@ const Footer = () => {
           left={
             <ImageBtn
               href={`/`}
-              src={!page.logo_image ? '' : page.logo_image.url}
-              alt={!page.logo_image ? '' : page.logo_image.description}
+              src={!page.brand_logo ? '' : page.brand_logo.url}
+              alt={!page.brand_logo ? '' : page.brand_logo.description}
             />
           }
           center={

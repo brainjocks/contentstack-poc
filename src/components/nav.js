@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import bjlogo from '../img/brainjocks-logo.svg'
 import { Link } from 'gatsby'
-import PageColumn1 from './Page-structures/score-column1-page'
+import PageColumn1 from './page-structures/score-column1-page'
 
 const links = [
   { href: '/', text: 'Home' },
