@@ -92,17 +92,17 @@ export default () => {
                   title
                 }
               }
-              #              image_button {
-              #                style
-              #                image {
-              #                  url
-              #                  description
-              #                }
-              #                link {
-              #                  href
-              #                  title
-              #                }
-              #              }
+              image_button {
+                style
+                image {
+                  url
+                  description
+                }
+                link {
+                  href
+                  title
+                }
+              }
             }
           }
           background_body {

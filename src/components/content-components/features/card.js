@@ -8,6 +8,10 @@ import BtnGroup from '../buttons/score-button-group'
 import PropTypes from 'prop-types'
 
 const Card = props => {
+  if (!props || !prop.item) {
+    return null
+  }
+
   const item = props.item.title_body
     ? props.item.title_body
     : props.item.full_highlight
@@ -16,7 +20,7 @@ const Card = props => {
     ? props.item.background_body
     : null
 
-  if (!props || !item) {
+  if (!item) {
     return null
   }
 

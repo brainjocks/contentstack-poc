@@ -1,15 +1,13 @@
-
-
-exports.createResolvers = ({createResolvers}) => {
+exports.createResolvers = ({ createResolvers }) => {
   const resolvers = {
     contentstackFormSuccessPage: {
       background_image: {
-        resolve(source, args, context, info)  {
-          if(!source.background_image) {
+        resolve(source, args, context, info) {
+          if (!source.background_image) {
             return info.originalResolver(
               {
                 ...source,
-                background_image: {}
+                background_image: {},
               },
               args,
               context,
@@ -18,9 +16,9 @@ exports.createResolvers = ({createResolvers}) => {
           } else {
             return info.originalResolver(source, args, context, info)
           }
-        }
-      }
-    }
+        },
+      },
+    },
   }
   createResolvers(resolvers)
 }
