@@ -8,7 +8,7 @@ import BtnGroup from '../buttons/score-button-group'
 import PropTypes from 'prop-types'
 
 const Card = props => {
-  if (!props || !prop.item) {
+  if (!props || !props.item) {
     return null
   }
 
