@@ -3,7 +3,7 @@ import renderHTML from 'react-render-html'
 
 import StyleBox from '../panels/score-style-box'
 import Highlight from './highlights'
-import Btn from '../buttons/score-button'
+import CardBtn from './card-btn'
 import BtnGroup from '../buttons/score-button-group'
 import PropTypes from 'prop-types'
 
@@ -34,16 +34,8 @@ const Card = props => {
         <BtnGroup
           children={
             item.call_to_action &&
-            item.call_to_action.button &&
-            item.call_to_action.button.map((innerItem, index) => {
-              return (
-                <Btn
-                  key={index}
-                  styleName={innerItem.style}
-                  href={innerItem.link && innerItem.link.href}
-                  text={innerItem.text}
-                />
-              )
+            item.call_to_action.map((innerItem, index) => {
+              return <CardBtn key={index} action={innerItem} />
             })
           }
         />
