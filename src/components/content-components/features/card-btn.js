@@ -4,7 +4,7 @@ import ImageBtn from '../buttons/score-image-button'
 import PropTypes from 'prop-types'
 
 const CardBtn = props => {
-  if (!props || !prop.action) {
+  if (!props || !props.action) {
     return null
   }
 

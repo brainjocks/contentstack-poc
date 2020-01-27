@@ -27,6 +27,17 @@
         max-width: 50%;
         margin: 0 0 30px;
     }
+    .score-image-button {
+        margin: 0 0 30px;
+        img {
+            display: none;
+        }
+        img[src*='/'] {
+            display: block;
+            max-width: 100%;
+            margin: 0;
+        }
+    }
     .caption {
         padding: 0;
         h2 {
@@ -56,7 +67,17 @@
                 margin-bottom: 20px; 
             }
         }
+        .score-call-to-action {
+            .score-button-group {
+                display: flex;
+                flex-direction: column;
+                a {
+                    align-self: flex-start;
+                }
+            }
+        }
     }
+
     &.quote {
 
         img {
