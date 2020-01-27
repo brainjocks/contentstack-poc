@@ -73,10 +73,11 @@ export default () => {
         center={
           <form
             name="contact"
-            method="post"
+            method="POST"
             action="/success"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
+            data-netlify-recaptcha="true"
           >
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
@@ -93,6 +94,7 @@ export default () => {
                       placeholder={item.input_placeholder_text}
                       spellCheck="false"
                       maxLength="240"
+                      name={item.input_label_text}
                     />
                   </div>
                 )
@@ -105,6 +107,7 @@ export default () => {
                     type={item.input_type}
                     placeholder={item.input_placeholder_text}
                     maxLength="100"
+                    name={item.input_label_text}
                   />
                 </div>
               )
@@ -114,6 +117,8 @@ export default () => {
                 <input type="checkbox" value="true" is required />
               </label>
               {renderHTML(formData.privacy_policy)}
+            </div>
+            <div data-netlify-recaptcha="true">
             </div>
             <input value="send" type="submit" />
           </form>

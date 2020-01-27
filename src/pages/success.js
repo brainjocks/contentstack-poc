@@ -15,7 +15,7 @@ const Success = () => (
       children={
         <HeroLeft
           color={`black`}
-          h1={`Thank you for you interest`}
+          h1={`Thank you for your interest`}
           body={`We will be in touch soon.`}
         />
       }
