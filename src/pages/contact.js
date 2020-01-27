@@ -77,7 +77,6 @@ export default () => {
             action="/success"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            data-netlify-recaptcha="true"
           >
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
@@ -102,8 +101,7 @@ export default () => {
               return (
                 <div className="form-group" key={index}>
                   <input
-                    is
-                    required
+                    required="required"
                     type={item.input_type}
                     placeholder={item.input_placeholder_text}
                     maxLength="100"
@@ -114,11 +112,9 @@ export default () => {
             })}
             <div className="form-group privacy">
               <label>
-                <input type="checkbox" value="true" is required />
+                <input type="checkbox" value="true" required="required" />
               </label>
               {renderHTML(formData.privacy_policy)}
-            </div>
-            <div data-netlify-recaptcha="true">
             </div>
             <input value="send" type="submit" />
           </form>

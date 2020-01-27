@@ -18,7 +18,7 @@ const CardBtn = props => {
     return null
   }
 
-  if (item.text)
+  if (props.action.button)
     return (
       <Btn
         styleName={item.style}
@@ -27,7 +27,7 @@ const CardBtn = props => {
       />
     )
 
-  if (item.image)
+  if (props.action.image_button)
     return (
       <ImageBtn
         styleName={item.style}
