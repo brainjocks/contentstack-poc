@@ -14,7 +14,7 @@ import PageColumn1 from '../components/page-structures/score-column1-page'
 
 export default () => {
   const page = useStaticQuery(graphql`
-    query {
+    query AboutUsPageQuery {
       contentstackContentPage {
         heroes {
           background_image {
@@ -22,19 +22,8 @@ export default () => {
             description
           }
           section_style
-          hero_right {
-            background_color
-            h1_text
-            h2_text
-            hero_body_text
-            btn_text
-            button_link {
-              href
-              title
-            }
-            button_style
-          }
-          hero_left {
+          hero_placement
+          hero {
             background_color
             h1_text
             h2_text
@@ -80,28 +69,30 @@ export default () => {
         color={`white`}
         children={[
           <HeroLeft
+            heroStyle={hero.hero_placement}
             key={1}
-            h1={hero.hero_left.h1_text}
-            h2={hero.hero_left.h2_text}
-            body={hero.hero_left.hero_body_text}
+            h1={hero.hero.h1_text}
+            h2={hero.hero.h2_text}
+            body={hero.hero.hero_body_text}
             children={
               <Btn
-                text={hero.hero_left.button_text}
-                href={hero.hero_left.button_link.href}
-                styleName={hero.hero_left.button_style}
+                text={hero.hero.button_text}
+                href={hero.hero.button_link.href}
+                styleName={hero.hero.button_style}
               />
             }
           />,
           <HeroRight
+            heroStyle={hero.hero_placement}
             key={2}
-            h1={hero.hero_right.h1_text}
-            h2={hero.hero_right.h2_text}
-            body={hero.hero_right.hero_body_text}
+            h1={hero.hero.h1_text}
+            h2={hero.hero.h2_text}
+            body={hero.hero.hero_body_text}
             children={
               <Btn
-                text={hero.hero_right.button_text}
-                href={hero.hero_right.button_link.href}
-                styleName={hero.hero_right.button_style}
+                text={hero.hero.button_text}
+                href={hero.hero.button_link.href}
+                styleName={hero.hero.button_style}
               />
             }
           />,

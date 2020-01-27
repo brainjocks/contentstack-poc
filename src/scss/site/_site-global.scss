@@ -580,3 +580,15 @@ sup {
 .show-delayed-on-scroll {
     overflow: hidden;
 }
+
+.container.hero.left {
+    .score-right .score-hero {
+        display: none;
+    }
+}
+
+.container.hero.right {
+    .score-left .score-hero {
+        display: none;
+    }
+}

@@ -118,8 +118,7 @@ export default () => {
               </label>
               {renderHTML(formData.privacy_policy)}
             </div>
-            <div data-netlify-recaptcha="true">
-            </div>
+            <div data-netlify-recaptcha="true"></div>
             <input value="send" type="submit" />
           </form>
         }

@@ -8,6 +8,7 @@ const HeroLeft = props => {
   }
   return (
     <PageColumn2Equal
+      styleName={props.heroStyle}
       left={
         <Hero
           h1={props.h1}
