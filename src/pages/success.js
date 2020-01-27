@@ -4,23 +4,36 @@ import Head from '../components/head'
 import '../scss/main.scss'
 import HeroLeft from '../components/section-components/hero-left'
 import Stripe from '../components/stripe'
+import { graphql, useStaticQuery } from "gatsby"
 
-const Success = () => (
+const Success = () => {
+  const data = useStaticQuery(graphql`
+      query SuccessPage {
+          contentstackFormSuccessPage {
+              background_color
+              text_color
+              h1_text
+              h2_text
+              body_text
+          }
+      }
+  `)
+  return (
   <Layout>
     <Head title="Success Page" />
     <meta name="description" content="Success Page" />
     <Stripe
       styleName={`small-spacing-bottom cover`}
-      backgroundColor={`#eeeeee`}
+      backgroundColor={data.contentstackFormSuccessPage.background_color}
       children={
         <HeroLeft
-          color={`black`}
-          h1={`Thank you for your interest`}
-          body={`We will be in touch soon.`}
+          color={data.contentstackFormSuccessPage.text_color}
+          h1={data.contentstackFormSuccessPage.h1_text}
+          body={data.contentstackFormSuccessPage.body_text}
         />
       }
     />
   </Layout>
-)
+)}
 
 export default Success
