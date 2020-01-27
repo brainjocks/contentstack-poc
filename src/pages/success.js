@@ -1,14 +1,25 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Head from '../components/head'
+import '../scss/main.scss'
+import HeroLeft from '../components/section-components/hero-left'
+import Stripe from '../components/stripe'
 
-const Success = props => (
+const Success = () => (
   <Layout>
-    <Helmet>
-      <Head title="Success Page" />
-      <meta name="description" content="Success Page" />
-    </Helmet>
+    <Head title="Success Page" />
+    <meta name="description" content="Success Page" />
+    <Stripe
+      styleName={`small-spacing-bottom cover`}
+      backgroundColor={`#eeeeee`}
+      children={
+        <HeroLeft
+          color={`black`}
+          h1={`Thank you for you interest`}
+          body={`We will be in touch soon.`}
+        />
+      }
+    />
   </Layout>
 )
 
