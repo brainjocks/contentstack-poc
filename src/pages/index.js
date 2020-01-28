@@ -1,14 +1,10 @@
 import React from 'react'
 import Stripe from '../components/stripe'
 import heroImageSectionTwo from '../img/dogs-on-motocycle-900.png'
-import pressbox from '../img/pressbox-tile-image.jpg'
-import brainjuice from '../img/brainjuice-tile-image.jpg'
-import jocks from '../img/jocks-to-the-core-tile-image.jpg'
 import lastSectionHero from '../img/careers-shoe-background.jpg'
 import '../scss/main.scss'
 import Layout from '../components/layout'
 import Card from '../components/content-components/features/card'
-import PageColumn3Wide from '../components/page-structures/score-column3-wide'
 import SectionHero from '../components/content-components/heroes/sectionHero'
 import StyleBox from '../components/content-components/panels/score-style-box'
 import Highlight from '../components/content-components/features/highlights'
@@ -16,9 +12,7 @@ import PageColumn1 from '../components/page-structures/score-column1-page'
 import CenterText from '../components/content-components/panels/score-center-text'
 import InnerColumn1 from '../components/inner-structures/score-column1-inner'
 import Btn from '../components/content-components/buttons/score-button'
-import InnerColumn3Wide from '../components/inner-structures/score-column3-wide-inner'
 import BtnGroup from '../components/content-components/buttons/score-button-group'
-import PageColumn3Equal from '../components/page-structures/score-column3-equal'
 import Head from '../components/head'
 import HeroLeft from '../components/section-components/hero-left'
 import SectionHeroCenter from '../components/section-components/section-hero-center'
@@ -273,68 +267,6 @@ export default () => {
             ]}
           />
         </PageColumn1>
-      </Stripe>
-      <Stripe>
-        <PageColumn1>
-          <InnerColumn3Wide
-            center={
-              <CenterText>
-                <SectionHero
-                  h2={`Brands We Serve`}
-                  body={`We enjoy creating innovations for companies of all sizes across the globe. Each of these brands represents relationships we value and partnerships made through collaboration.`}
-                />
-              </CenterText>
-            }
-          />
-        </PageColumn1>
-      </Stripe>
-      <Stripe backgroundColor={section2Color}>
-        <PageColumn3Wide
-          center={
-            <CenterText>
-              <SectionHero
-                h2={`Jocks out and About`}
-                body={`There’s a lot going on and we have a lot to share. Check out our latest news and industry expert blogs.`}
-              />
-            </CenterText>
-          }
-        />
-        <PageColumn3Equal
-          styleName={`flex`}
-          left={
-            <Highlight
-              styleName={`news`}
-              alt={`press box logo image`}
-              src={pressbox}
-              heading={`Brainjocks Unveils Innovative Content Localization Approach at Symposium`}
-              body={`Today, Brainjocks announces its annual sponsorship of Sitecore Symposium in Orlando, where they will also unveil an innovative content localization approach. Symposium is being...`}
-            >
-              <Btn styleName={`btn-link`} text={`read more`} href={`#`} />
-            </Highlight>
-          }
-          center={
-            <Highlight
-              styleName={`news`}
-              alt={`brainjuice logo image`}
-              src={brainjuice}
-              heading={`V is for Voice of the Customer`}
-              body={`Establishing a VoC program will help you ensure that you are meeting customer needs and expectations. From a definition standpoint, when we talk about Voice of the Customer...`}
-            >
-              <Btn styleName={`btn-link`} text={`read more`} href={`#`} />
-            </Highlight>
-          }
-          right={
-            <Highlight
-              styleName={`news`}
-              alt={`jocks to the core logo image`}
-              src={jocks}
-              heading={`7 Steps to create lower environments with Sitecore Commerce`}
-              body={`When dealing with live websites, it is desired to have lower environments that mirror production as closely as possible. Why?`}
-            >
-              <Btn styleName={`btn-link`} text={`read more`} href={`#`} />
-            </Highlight>
-          }
-        />
       </Stripe>
       <Stripe backgroundImage={lastSectionHero} color={heroStripeColor}>
         <SectionHeroRight
