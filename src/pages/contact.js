@@ -14,6 +14,7 @@ export default () => {
   const page = useStaticQuery(graphql`
     query ContactQuery {
       contentstackContactUsPage {
+        title
         hero {
           background_style_name
           background_image {
@@ -52,7 +53,7 @@ export default () => {
   const formData = page.contentstackContactUsPage.form
   return (
     <Layout>
-      <Head title="Contact Us" />
+      <Head title={page.contentstackContactUsPage.title} />
       <Stripe
         backgroundImage={heroData.background_image.url}
         color={heroData.text_color}

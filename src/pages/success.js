@@ -10,6 +10,7 @@ const Success = () => {
   const data = useStaticQuery(graphql`
     query SuccessPage {
       contentstackFormSuccessPage {
+        title
         background_color
         text_color
         h1_text
@@ -20,7 +21,7 @@ const Success = () => {
   `)
   return (
     <Layout>
-      <Head title="Success Page" />
+      <Head title={data.contentstackFormSuccessPage.title} />
       <meta name="description" content="Success Page" />
       <Stripe
         styleName={`small-spacing-bottom cover`}

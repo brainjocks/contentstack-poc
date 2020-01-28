@@ -16,6 +16,7 @@ export default () => {
   const page = useStaticQuery(graphql`
     query AboutUsPageQuery {
       contentstackContentPage {
+        title
         heroes {
           background_image {
             url
@@ -63,7 +64,7 @@ export default () => {
   const video = page.contentstackContentPage.video_highlight
   return (
     <Layout>
-      <Head title="About" />
+      <Head title={page.contentstackContentPage.title} />
       <Stripe
         styleName={hero.section_style}
         backgroundImage={hero.background_image.url}

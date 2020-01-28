@@ -27,6 +27,7 @@ export default () => {
   const dataSet = useStaticQuery(graphql`
     query {
       contentstackHomePage {
+        title
         hero_section {
           style
           h1
@@ -142,7 +143,7 @@ export default () => {
   `)
   return (
     <Layout>
-      <Head title="Home" />
+      <Head title={dataSet.contentstackHomePage.title} />
       <Stripe
         styleName={dataSet.contentstackHomePage.hero_section.style}
         backgroundImage={
