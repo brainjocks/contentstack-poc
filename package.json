@@ -16,7 +16,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.18.12",
+    "gatsby": "^2.18.0-alpha.1",
     "gatsby-cli": "^2.8.20",
     "gatsby-plugin-manifest": "^2.2.34",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
