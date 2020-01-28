@@ -21,7 +21,9 @@ export default () => {
           }
           background_color
           text_color
-          hero_content
+          hero_style {
+            key
+          }
           h1_text
           h2_text
           hero_body_text
@@ -57,7 +59,7 @@ export default () => {
         styleName={heroData.background_style_name}
         children={
           <PageColumn2Equal
-            styleName={heroData.hero_content}
+            styleName={heroData.hero_style[0].key}
             left={
               <Hero
                 h1={heroData.h1_text}

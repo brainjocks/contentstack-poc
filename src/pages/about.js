@@ -22,7 +22,9 @@ export default () => {
             description
           }
           section_style
-          hero_placement
+          hero_style {
+            key
+          }
           hero {
             background_color
             h1_text
@@ -69,7 +71,7 @@ export default () => {
         color={`white`}
         children={
           <PageColumn2Equal
-            styleName={hero.hero_placement}
+            styleName={hero.hero_style[0].key}
             right={
               <Hero
                 key={1}
