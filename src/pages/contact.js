@@ -2,12 +2,13 @@ import React from 'react'
 import '../scss/main.scss'
 import Layout from '../components/layout'
 import Head from '../components/head'
-import HeroLeft from '../components/section-components/hero-left'
 import Stripe from '../components/stripe'
 import Btn from '../components/content-components/buttons/score-button'
 import PageColumn3Wide from '../components/page-structures/score-column3-wide'
 import { graphql, useStaticQuery } from 'gatsby'
 import renderHTML from 'react-render-html'
+import PageColumn2Equal from '../components/page-structures/score-column2-equal-page'
+import Hero from '../components/content-components/heroes/hero'
 
 export default () => {
   const page = useStaticQuery(graphql`
@@ -55,15 +56,34 @@ export default () => {
         color={heroData.text_color}
         styleName={heroData.background_style_name}
         children={
-          <HeroLeft
-            h1={heroData.h1_text}
-            h2={heroData.h2_text}
-            body={heroData.hero_body_text}
-            children={
-              <Btn
-                text={heroData.button_link.title}
-                href={heroData.button_link.href}
-                styleName={heroData.button_style_name}
+          <PageColumn2Equal
+            styleName={heroData.hero_content}
+            left={
+              <Hero
+                h1={heroData.h1_text}
+                h2={heroData.h2_text}
+                body={heroData.hero_body_text}
+                children={
+                  <Btn
+                    text={heroData.button_link.title}
+                    href={heroData.button_link.href}
+                    styleName={heroData.button_style_name}
+                  />
+                }
+              />
+            }
+            right={
+              <Hero
+                h1={heroData.h1_text}
+                h2={heroData.h2_text}
+                body={heroData.hero_body_text}
+                children={
+                  <Btn
+                    text={heroData.button_link.title}
+                    href={heroData.button_link.href}
+                    styleName={heroData.button_style_name}
+                  />
+                }
               />
             }
           />

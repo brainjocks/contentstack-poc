@@ -3,14 +3,14 @@ import '../scss/main.scss'
 import Layout from '../components/layout'
 import Head from '../components/head'
 import Stripe from '../components/stripe'
-import HeroRight from '../components/section-components/hero-right'
-import HeroLeft from '../components/section-components/hero-left'
 import Btn from '../components/content-components/buttons/score-button'
 import YoutubeVideo from '../components/content-components/score-youtube-video'
 import { graphql, useStaticQuery } from 'gatsby'
 import StyleBox from '../components/content-components/panels/score-style-box'
 import Highlight from '../components/content-components/features/highlights'
 import PageColumn1 from '../components/page-structures/score-column1-page'
+import PageColumn2Equal from '../components/page-structures/score-column2-equal-page'
+import Hero from '../components/content-components/heroes/hero'
 
 export default () => {
   const page = useStaticQuery(graphql`
@@ -67,36 +67,41 @@ export default () => {
         backgroundImage={hero.background_image.url}
         backgroundColor={``}
         color={`white`}
-        children={[
-          <HeroLeft
-            heroStyle={hero.hero_placement}
-            key={1}
-            h1={hero.hero.h1_text}
-            h2={hero.hero.h2_text}
-            body={hero.hero.hero_body_text}
-            children={
-              <Btn
-                text={hero.hero.button_text}
-                href={hero.hero.button_link.href}
-                styleName={hero.hero.button_style}
+        children={
+          <PageColumn2Equal
+            styleName={hero.hero_placement}
+            right={
+              <Hero
+                key={1}
+                h1={hero.hero.h1_text}
+                h2={hero.hero.h2_text}
+                body={hero.hero.hero_body_text}
+                children={
+                  <Btn
+                    text={hero.hero.button_text}
+                    href={hero.hero.button_link.href}
+                    styleName={hero.hero.button_style}
+                  />
+                }
               />
             }
-          />,
-          <HeroRight
-            heroStyle={hero.hero_placement}
-            key={2}
-            h1={hero.hero.h1_text}
-            h2={hero.hero.h2_text}
-            body={hero.hero.hero_body_text}
-            children={
-              <Btn
-                text={hero.hero.button_text}
-                href={hero.hero.button_link.href}
-                styleName={hero.hero.button_style}
+            left={
+              <Hero
+                key={1}
+                h1={hero.hero.h1_text}
+                h2={hero.hero.h2_text}
+                body={hero.hero.hero_body_text}
+                children={
+                  <Btn
+                    text={hero.hero.button_text}
+                    href={hero.hero.button_link.href}
+                    styleName={hero.hero.button_style}
+                  />
+                }
               />
             }
-          />,
-        ]}
+          />
+        }
       />
       <Stripe
         backgroundColor={video.video_stripe_color}
