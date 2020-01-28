@@ -1,7 +1,6 @@
 import React from 'react'
 import Stripe from '../components/stripe'
 import heroImageSectionTwo from '../img/dogs-on-motocycle-900.png'
-import lastSectionHero from '../img/careers-shoe-background.jpg'
 import '../scss/main.scss'
 import Layout from '../components/layout'
 import Card from '../components/content-components/features/card'
@@ -22,7 +21,6 @@ import StickySectionLeft from '../components/section-components/sticky-section-l
 import { graphql, useStaticQuery } from 'gatsby'
 import data from '../data/data.json'
 
-let heroStripeColor = '#FFFFFF'
 let section2Color = '#EEEEEE'
 
 export default () => {
@@ -120,6 +118,24 @@ export default () => {
             href
           }
           button_style
+        }
+        hero_section_career {
+          background_color
+          background_image {
+            url
+          }
+          h2
+          body
+          button_1_text
+          button_1_link {
+            href
+          }
+          button_1_style
+          button_2_text
+          button_2_link {
+            href
+          }
+          button_2_style
         }
       }
     }
@@ -268,24 +284,50 @@ export default () => {
           />
         </PageColumn1>
       </Stripe>
-      <Stripe backgroundImage={lastSectionHero} color={heroStripeColor}>
+      <Stripe
+        styleName={dataSet.contentstackHomePage.hero_section_career.style}
+        backgroundImage={
+          dataSet.contentstackHomePage.hero_section_career.background_image.url
+        }
+        color={
+          dataSet.contentstackHomePage.hero_section_career.background_color
+        }
+      >
         <SectionHeroRight
-          h2={`Interested in a career at Brainjocks?`}
-          body={`Phenomenal benefits, great culture, and a career innovating with digital technologies... there are many reasons why becoming a Jock is a no brainer! Learn more about why it’s great to be a Brainjock and browse our job listings while you're here.`}
+          h2={dataSet.contentstackHomePage.hero_section_career.h2}
+          body={dataSet.contentstackHomePage.hero_section_career.body}
           children={
             <BtnGroup
               children={[
                 <Btn
                   key={`29a77d0f-3c15-44c5-a688-c82a2ee3b2e4`}
-                  text={`Learn More`}
-                  href={`#`}
-                  styleName={`over-dark`}
+                  text={
+                    dataSet.contentstackHomePage.hero_section_career
+                      .button_1_text
+                  }
+                  href={
+                    dataSet.contentstackHomePage.hero_section_career
+                      .button_1_link.href
+                  }
+                  styleName={
+                    dataSet.contentstackHomePage.hero_section_career
+                      .button_1_style
+                  }
                 />,
                 <Btn
                   key={`305947cc-ec93-4ca7-93fa-c0992c209ff2`}
-                  text={`See all open jobs`}
-                  href={`#`}
-                  styleName={`over-dark-hollow`}
+                  text={
+                    dataSet.contentstackHomePage.hero_section_career
+                      .button_2_text
+                  }
+                  href={
+                    dataSet.contentstackHomePage.hero_section_career
+                      .button_2_link.href
+                  }
+                  styleName={
+                    dataSet.contentstackHomePage.hero_section_career
+                      .button_2_style
+                  }
                 />,
               ]}
             />
