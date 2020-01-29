@@ -13,7 +13,7 @@ const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
       contentstackFooter {
-        brand_logo {
+          brand_image {
           url
           description
         }
@@ -46,8 +46,8 @@ const Footer = () => {
           left={
             <ImageBtn
               href={`/`}
-              src={!page.brand_logo ? '' : page.brand_logo.url}
-              alt={!page.brand_logo ? '' : page.brand_logo.description}
+              src={!page.brand_image ? '' : page.brand_image.url}
+              alt={!page.brand_image ? '' : page.brand_image.description}
             />
           }
           center={
