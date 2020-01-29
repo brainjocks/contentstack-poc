@@ -15,6 +15,11 @@ export default () => {
     query ContactQuery {
       contentstackContactUsPage {
         title
+        seo {
+          meta_title
+          meta_description
+          meta_keywords
+        }
         hero {
           background_style_name
           background_image {
@@ -53,7 +58,12 @@ export default () => {
   const formData = page.contentstackContactUsPage.form
   return (
     <Layout>
-      <Head title={page.contentstackContactUsPage.title} />
+      <Head
+        title={page.contentstackContactUsPage.title}
+        metaTitle={page.contentstackContactUsPage.seo.meta_title}
+        metaDescription={page.contentstackContactUsPage.seo.meta_description}
+        metaKeywords={page.contentstackContactUsPage.seo.meta_keywords}
+      />
       <Stripe
         backgroundImage={heroData.background_image.url}
         color={heroData.text_color}

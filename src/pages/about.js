@@ -17,6 +17,11 @@ export default () => {
     query AboutUsPageQuery {
       contentstackContentPage {
         title
+        seo {
+          meta_title
+          meta_description
+          meta_keywords
+        }
         heroes {
           background_image {
             url
@@ -64,7 +69,12 @@ export default () => {
   const video = page.contentstackContentPage.video_highlight
   return (
     <Layout>
-      <Head title={page.contentstackContentPage.title} />
+      <Head
+        title={page.contentstackContentPage.title}
+        metaTitle={page.contentstackContentPage.seo.meta_title}
+        metaDescription={page.contentstackContentPage.seo.meta_description}
+        metaKeywords={page.contentstackContentPage.seo.meta_keywords}
+      />
       <Stripe
         styleName={hero.section_style}
         backgroundImage={hero.background_image.url}

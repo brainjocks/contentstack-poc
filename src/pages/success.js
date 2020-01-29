@@ -11,6 +11,11 @@ const Success = () => {
     query SuccessPage {
       contentstackFormSuccessPage {
         title
+        seo {
+          meta_title
+          meta_description
+          meta_keywords
+        }
         background_color
         text_color
         h1_text
@@ -21,7 +26,12 @@ const Success = () => {
   `)
   return (
     <Layout>
-      <Head title={data.contentstackFormSuccessPage.title} />
+      <Head
+        title={data.contentstackFormSuccessPage.title}
+        metaTitle={data.contentstackFormSuccessPage.seo.meta_title}
+        metaDescription={data.contentstackFormSuccessPage.seo.meta_description}
+        metaKeywords={data.contentstackFormSuccessPage.seo.meta_keywords}
+      />
       <meta name="description" content="Success Page" />
       <Stripe
         styleName={`small-spacing-bottom cover`}

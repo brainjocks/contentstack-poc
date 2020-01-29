@@ -28,6 +28,11 @@ export default () => {
     query {
       contentstackHomePage {
         title
+        seo {
+          meta_title
+          meta_description
+          meta_keywords
+        }
         hero_section {
           style
           h1
@@ -143,7 +148,12 @@ export default () => {
   `)
   return (
     <Layout>
-      <Head title={dataSet.contentstackHomePage.title} />
+      <Head
+        title={dataSet.contentstackHomePage.title}
+        metaTitle={dataSet.contentstackHomePage.seo.meta_title}
+        metaDescription={dataSet.contentstackHomePage.seo.meta_description}
+        metaKeywords={dataSet.contentstackHomePage.seo.meta_keywords}
+      />
       <Stripe
         styleName={dataSet.contentstackHomePage.hero_section.style}
         backgroundImage={

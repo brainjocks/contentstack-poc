@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql, useStaticQuery } from 'gatsby'
 
-const Head = ({ title }) => {
+const Head = ({ title, metaTitle, metaDescription, metaKeywords }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -31,15 +31,12 @@ const Head = ({ title }) => {
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1623" />
       <meta property="og:image:height" content="911" />
-      <meta name="keywords" content="Brainjocks,Customer Experience,CMS" />
+      <meta name="keywords" content={metaKeywords} />
       <meta
         property="og:description"
         content="At Brainjocks, we create digital innovations that deliver engaging experiences through technology to enable and empower business."
       />
-      <meta
-        name="description"
-        content="At Brainjocks, we create digital innovations that deliver engaging experiences through technology to enable and empower business."
-      />
+      <meta name="description" content={metaDescription} />
       <meta property="og:url" content="https://brainjocks.com/" />
     </Helmet>
   )

@@ -13,7 +13,7 @@ const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
       contentstackFooter {
-          brand_image {
+        brand_image {
           url
           description
         }
