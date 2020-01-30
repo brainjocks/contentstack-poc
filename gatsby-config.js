@@ -13,6 +13,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: 'Brainjocks.com + Contentstack',
+    siteUrl: `https://brainjocks-com.netlify.com/`
   },
   plugins: [
     'gatsby-plugin-sitemap',
