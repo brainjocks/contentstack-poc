@@ -15,6 +15,7 @@ module.exports = {
     title: 'Brainjocks.com + Contentstack',
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     {
