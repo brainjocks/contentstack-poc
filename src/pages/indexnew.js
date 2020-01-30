@@ -200,7 +200,7 @@ export default () => {
                 item.stripe_sticky_section_blocks.stripe_background_color
               }
             >
-              {item.stripe_sticky_section_blocks.orientation === 'Right' ? (
+              {item.stripe_sticky_section_blocks.orientaton === 'Right' ? (
                 <StickySectionRight
                   h3={item.stripe_sticky_section_blocks.hero_h3}
                   body={item.stripe_sticky_section_blocks.hero_body}
