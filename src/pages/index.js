@@ -217,7 +217,7 @@ export default () => {
         <StickySectionLeft
           h3={`Section Hero`}
           body={`What makes Brainjocks unique? We don't just build great
-              experiences, we partner with our clients and enable them to make the most of their
+              experiences, we part  ner with our clients and enable them to make the most of their
               platform and digital assets. Our approach provides the architecture and the
               operational transformation needed for your team to be efficient, empowered and most
               importantly, effective.`}
