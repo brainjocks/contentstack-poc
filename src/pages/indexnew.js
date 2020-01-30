@@ -57,15 +57,15 @@ export default () => {
           button_style
         }
         stripe_sticky_sections {
-          stripe_sticky_section_blocks {
+          stripe_sticky_section_block {
             stripe_background_color
             hero_h3
             hero_body
             hero_image {
               url
             }
-            orientaton
-            stripe_sticky_section_right_highlights {
+            orientation
+            stripe_sticky_section_highlights {
               title_body {
                 title
                 body
@@ -123,7 +123,7 @@ export default () => {
           }
           button_style
         }
-        hero_section_career {
+        career_hero_section {
           background_color
           background_image {
             url
@@ -197,15 +197,15 @@ export default () => {
               key={index}
               styleName={`sticky-parent`}
               backgroundColor={
-                item.stripe_sticky_section_blocks.stripe_background_color
+                item.stripe_sticky_section_block.stripe_background_color
               }
             >
-              {item.stripe_sticky_section_blocks.orientaton === 'Right' ? (
+              {item.stripe_sticky_section_block.orientation === 'Right' ? (
                 <StickySectionRight
-                  h3={item.stripe_sticky_section_blocks.hero_h3}
-                  body={item.stripe_sticky_section_blocks.hero_body}
-                  src={item.stripe_sticky_section_blocks.hero_image.url}
-                  cards={item.stripe_sticky_section_blocks.stripe_sticky_section_right_highlights.map(
+                  h3={item.stripe_sticky_section_block.hero_h3}
+                  body={item.stripe_sticky_section_block.hero_body}
+                  src={item.stripe_sticky_section_block.hero_image.url}
+                  cards={item.stripe_sticky_section_block.stripe_sticky_section_highlights.map(
                     (innerItem, innerIndex) => {
                       return <Card item={innerItem} key={innerIndex} />
                     }
@@ -213,10 +213,10 @@ export default () => {
                 />
               ) : (
                 <StickySectionLeft
-                  h3={item.stripe_sticky_section_blocks.hero_h3}
-                  body={item.stripe_sticky_section_blocks.hero_body}
-                  src={item.stripe_sticky_section_blocks.hero_image.url}
-                  cards={item.stripe_sticky_section_blocks.stripe_sticky_section_right_highlights.map(
+                  h3={item.stripe_sticky_section_block.hero_h3}
+                  body={item.stripe_sticky_section_block.hero_body}
+                  src={item.stripe_sticky_section_block.hero_image.url}
+                  cards={item.stripe_sticky_section_block.stripe_sticky_section_highlights.map(
                     (innerItem, innerIndex) => {
                       return <Card item={innerItem} key={innerIndex} />
                     }
@@ -274,47 +274,47 @@ export default () => {
         </PageColumn1>
       </Stripe>
       <Stripe
-        styleName={dataSet.contentstackHomePage2.hero_section_career.style}
+        styleName={dataSet.contentstackHomePage2.career_hero_section.style}
         backgroundImage={
-          dataSet.contentstackHomePage2.hero_section_career.background_image.url
+          dataSet.contentstackHomePage2.career_hero_section.background_image.url
         }
         color={
-          dataSet.contentstackHomePage2.hero_section_career.background_color
+          dataSet.contentstackHomePage2.career_hero_section.background_color
         }
       >
         <SectionHeroRight
-          h2={dataSet.contentstackHomePage2.hero_section_career.h2}
-          body={dataSet.contentstackHomePage2.hero_section_career.body}
+          h2={dataSet.contentstackHomePage2.career_hero_section.h2}
+          body={dataSet.contentstackHomePage2.career_hero_section.body}
           children={
             <BtnGroup
               children={[
                 <Btn
                   key={`29a77d0f-3c15-44c5-a688-c82a2ee3b2e4`}
                   text={
-                    dataSet.contentstackHomePage2.hero_section_career
+                    dataSet.contentstackHomePage2.career_hero_section
                       .button_1_text
                   }
                   href={
-                    dataSet.contentstackHomePage2.hero_section_career
+                    dataSet.contentstackHomePage2.career_hero_section
                       .button_1_link.href
                   }
                   styleName={
-                    dataSet.contentstackHomePage2.hero_section_career
+                    dataSet.contentstackHomePage2.career_hero_section
                       .button_1_style
                   }
                 />,
                 <Btn
                   key={`305947cc-ec93-4ca7-93fa-c0992c209ff2`}
                   text={
-                    dataSet.contentstackHomePage2.hero_section_career
+                    dataSet.contentstackHomePage2.career_hero_section
                       .button_2_text
                   }
                   href={
-                    dataSet.contentstackHomePage2.hero_section_career
+                    dataSet.contentstackHomePage2.career_hero_section
                       .button_2_link.href
                   }
                   styleName={
-                    dataSet.contentstackHomePage2.hero_section_career
+                    dataSet.contentstackHomePage2.career_hero_section
                       .button_2_style
                   }
                 />,
