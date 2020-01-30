@@ -40,7 +40,7 @@ const Footer = () => {
   `)
   const page = data.contentstackFooter
   return (
-    <footer>
+    <footer className={`score-footer`}>
       <PageColumn1>
         <InnerColumn3Wide
           left={

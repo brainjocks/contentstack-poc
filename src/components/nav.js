@@ -40,6 +40,10 @@ class Header extends Component {
   }
 
   toggleNavbar() {
+    let wrapper = document.getElementsByClassName('page-wrapper')[0]
+    wrapper.classList.toggle('menu-open')
+    let footer = document.getElementsByClassName('score-footer')[0]
+    footer.classList.toggle('menu-open')
     this.setState({
       collapsed: !this.state.collapsed,
     })
@@ -48,11 +52,13 @@ class Header extends Component {
   render() {
     const classDropdownMenu =
       'navbar-collapse collapse' + (this.state.collapsed ? ' ' : ' in')
+    const classheader =
+      'score-header' + (this.state.collapsed ? ' ' : ' menu-open')
     const buttonToggle =
       'score-hamburger navbar-toggle' +
       (!this.state.collapsed ? '' : ' collapsed')
     return (
-      <header id="navbar">
+      <header id="navbar" className={classheader}>
         <PageColumn1>
           <div className="score-megamenu">
             <div className="score-nav-wrapper">

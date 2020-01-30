@@ -311,11 +311,11 @@ header {
                 top: 66px;
                 right: -100%;
                 bottom: 0;
-                display: none !important;
                 overflow: hidden;
                 width: 0;
                 height: 0;
                 background-color: $brainjocks-black;
+                transition: all 0.7s ease;
                 @media screen and (min-width: $screen-md-min) {
                     top: 122px;
                 }
@@ -326,7 +326,7 @@ header {
                     overflow: auto !important;
                     width: 100%;
                     height: auto;
-                    transition: all 0.2s ease;
+                    transition: all 0.7s ease;
                     background-color: $brainjocks-black;
                     @media screen and (min-width: $screen-sm-min) {
                         width: 300px;
