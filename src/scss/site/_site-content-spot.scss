@@ -1,34 +1,34 @@
 .score-content-spot {
-    position: relative;
-    @include vertical-space($vertical-spacing);
-    &.left-energy-bar {
-        margin-left: 6px;
-        @media screen and (min-width: $screen-sm-min) {
-            margin-left: 0;
-        }
-        &:before {
-            content: "";
-            position: absolute;
-            top: 6px;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: calc(100% - 7px);
-            background: $brainjocks-primary;
-            transition: all .5s ease;
-            @media screen and (min-width: $screen-sm-min) {
-                top: 7px;
-                height: calc(100% - 10px);
-            }
-        }
-        strong {
-            text-transform: uppercase;
-        }
-        &.active {
-            &:before {
-                left: -21px;
-                width: 6px;
-            }
-        }
+  position: relative;
+  @include vertical-space($vertical-spacing);
+  &.left-energy-bar {
+    margin-left: 6px;
+    @media screen and (min-width: $screen-sm-min) {
+      margin-left: 0;
     }
+    &:before {
+      position: absolute;
+      top: 6px;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: calc(100% - 7px);
+      content: "";
+      transition: all .5s ease;
+      background: $brainjocks-primary;
+      @media screen and (min-width: $screen-sm-min) {
+        top: 7px;
+        height: calc(100% - 10px);
+      }
+    }
+    strong {
+      text-transform: uppercase;
+    }
+    &.active {
+      &:before {
+        left: -21px;
+        width: 6px;
+      }
+    }
+  }
 }
